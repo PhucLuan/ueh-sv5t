@@ -1,0 +1,167 @@
+.container.InfoEvent{
+  padding-top: 50px;
+  background-color: #E5E5E5;
+}
+.img-top{
+  height: 100%;
+}
+.container-content-text{
+  background-color: white;
+  border-radius: 10px;
+}
+.title-chuongtrinh{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #FF6D4D;
+  padding-top: 10px;
+  margin-left: 10px;   
+}
+.text-chuongtrinh{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 144.69%;
+  color: #000000;
+  padding-top: 10px;
+  margin-left: 10px;
+}   
+.button.Detail{
+  padding-top: 15px;
+}
+.button.Detail button{
+  width: 100%;
+  background: #FF6D4D;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.row_1,.row_2{
+  display: flex;
+}
+.content{
+  width: 100%;
+  margin-left: 0;
+}
+.title-description{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FF6D4D;
+}
+.description-content{
+  background-color:#FFFFFF;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+.description-text{
+  padding-left: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+.content-list{
+  width: 60%;
+  background-color:#FFFFFF;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+.swiper-wrapper{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.img-card{
+  width: 100%;
+}
+.card-text{
+  width: 198px;
+  height: 38px;
+  left: 167px;
+  top: 1457px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 144.69%;
+  text-align: center;
+  color: #FF6D4D;
+}
+.swiper-pagination{
+  margin-bottom: -15px;
+}
+@media (max-width: 750px){
+.row_1,.row_2{
+  display: block;
+}
+.col-md-5.col-lg-5{
+  padding-top: 30px;
+}
+.img-top{
+  width: 100%;
+  height: 80%;
+}
+.container-content-text{
+  background-color: white;
+  border-radius: 10px;
+}
+.title-chuongtrinh{
+  font-size: 13.5px;
+  line-height: 16px;
+}
+.text-chuongtrinh{
+  font-size: 12px;
+  line-height: 170.69%;
+}   
+.button.Detail{
+  padding-top: 15px;
+}
+.button.Detail button{
+  width: 100%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.description-text{
+  font-size: 12px;
+  line-height: 144.69%;
+}
+.title-description{
+  font-size: 13px;
+  line-height: 15px;
+}
+.content-list,.description-content{
+  width: 100%;
+}
+.card{
+  width: 250%;
+}
+.img-card img{
+  width: 37%;
+  height: 13rem;
+}
+.card-text{
+  width: 37%;
+  font-size: 12px;
+  line-height: 14px;
+}
+}
+

@@ -1,0 +1,212 @@
+.NavBar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    padding: 0 50px;
+    transition: 1.4s;
+}
+
+.NavBar.active{
+    background-color: royalblue;
+    transition: 1.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+.NavBar.active .My-nav-items li a{
+    color: white;
+}
+
+.IconToggle,.IconSearch{
+    color: #005495;
+}
+
+.NavBar.active .IconToggle, .NavBar.active .IconSearch{
+    color: white;
+}
+
+.NavBar .logo {
+    width: 250px;
+}
+
+.NavBar .My-nav-items {
+    display: flex;
+    flex: 1;
+    padding: 0 0 0 40px;
+}
+
+.NavBar .My-nav-items li {
+    list-style: none;
+    padding: 0 30px;
+}
+
+.NavBar .My-nav-items li a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #005495;
+}
+
+.NavBar .My-nav-items li a:hover {
+    color: #ff3d00;
+}
+
+.NavBar form {
+    display: flex;
+    height: 40px;
+    padding: 2px;
+    background: #f9fbff;
+    min-width: 18%!important;
+    border-radius: 4px;
+    border: 1px solid rgba(155, 155, 155);
+}
+
+.NavBar form .search-data {
+    width: 80%;
+    height: 100%;
+    padding: 0 5px;
+    color: rgb(7, 7, 7);
+    font-size: 15px;
+    border: none;
+    font-weight: 400;
+    background: none;
+}
+
+.NavBar form button {
+    padding: 0 15px;
+    color: #fff;
+    font-size: 17px;
+    color: #005495;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.NavBar form button:hover {
+    background: #e63600;
+}
+
+.NavBar .menu-icon {
+    margin-top: 6px !important;
+}
+
+.NavBar .menu-icon,
+.NavBar .cancel-icon,
+.NavBar .search-icon {
+    width: 40px;
+    text-align: center;
+    margin: 0 50px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.NavBar .menu-icon span,
+.NavBar .cancel-icon,
+.NavBar .search-icon {
+    display: none;
+}
+
+@media (max-width: 1245px) {
+    .NavBar {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 2000px) {}
+
+@media (max-width: 1140px) {
+    .NavBar {
+        padding: 0px;
+    }
+    .NavBar .logo {
+        flex: 2;
+        text-align: center;
+    }
+    .NavBar .My-nav-items {
+        position: fixed;
+        z-index: 99;
+        top: 70px;
+        width: 100%;
+        left: -100%;
+        height: 100%;
+        padding: 20px 20px 0 50px;
+        text-align: left;
+        background: #005495;
+        display: inline-block;
+        transition: left 0.3s ease;
+    }
+    .NavBar .My-nav-items.active {
+        left: 0px;
+    }
+    .NavBar .My-nav-items li {
+        line-height: 40px;
+        margin: 30px 0;
+        text-align: left;
+    }
+    .NavBar .My-nav-items li a {
+        font-size: 18px;
+        color: #ffffff;
+    }
+    .NavBar form {
+        position: absolute;
+        top: 80px;
+        right: 50px;
+        opacity: 0;
+        pointer-events: none;
+        transition: top 0.3s ease, opacity 0.1s ease;
+    }
+    .NavBar form.active {
+        top: 95px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .NavBar form:before {
+        position: absolute;
+        content: "";
+        top: -13px;
+        right: 0px;
+        width: 0;
+        height: 0;
+        z-index: -1;
+        border: 10px solid transparent;
+        border-bottom-color: #005495;
+        margin: -20px 0 0;
+    }
+    .NavBar form:after {
+        position: absolute;
+        content: '';
+        height: 60px;
+        padding: 2px;
+        background: #1e232b;
+        border-radius: 2px;
+        min-width: calc(100% + 20px);
+        z-index: -2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .NavBar .menu-icon {
+        display: block;
+    }
+    .NavBar .search-icon {
+        font-size: 16px;
+    }
+    .NavBar .search-icon,
+    .NavBar .menu-icon span {
+        display: block;
+    }
+    .NavBar .menu-icon span.hide,
+    .NavBar .search-icon.hide {
+        display: none;
+    }
+    .NavBar .cancel-icon.show {
+        display: block;
+        color: red;
+    }
+}

@@ -1,0 +1,154 @@
+/* @font-face{
+    src: url(./Roboto/Roboto-Light.ttf);
+    font-family: Roboto;
+} */
+
+ExamplaryStu{
+    background-color:#edf3f8 !important;
+}
+/* Gương SV5TOT------------------------------------------------------------- */
+.Guong_SV5TOT{
+    font-family: Roboto;
+    background-color:white;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+}
+.Title_SV5TOT_TB{
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight: bold;
+    color: #005495;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.card-text h5{
+    font-family: Roboto;
+    font-weight: bold;
+}
+.card-text p{
+    font-family: Roboto;
+    font-size: 17px;
+    line-height: 20px;
+
+}
+.card{
+    border: none !important;
+    width: 28rem;
+    margin: auto;
+}
+
+/* Sinh vien năm tốt 2020---------------------------------------------------------------- */
+.SV5TOT_2020{
+    font-family: Roboto;
+    margin: auto;
+}
+.Title_SV5TOT_2020{
+    font-size: 20px;
+    font-family: Roboto;
+    font-weight: bold;
+    color:#005495;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+.SV5T_2020_item{
+    width: 291px;
+    height: 258px;
+    background-color:white;
+    border-radius: 10px;
+}
+.SV5T_2020_item .Img_SV5T_2020 img{
+    width: 271.71px;
+    height: 172.72px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.Img_SV5T_2020{
+    text-align: center;
+    margin-top: 10px;
+}
+.Title_SV5T_2020{
+    margin-top: 10px;
+    text-align: center;
+
+}
+.Title_SV5T_2020 h5{
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: bolder;
+    line-height: 16px;
+}
+.Title_SV5T_2020 p{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 15px;
+}
+/* Sinh vien năm tốt 2019---------------------------------------------------------------- */
+.SV5TOT_2019{
+    font-family: Roboto;
+    margin: auto;
+}
+.Title_SV5TOT_2019{
+    font-size: 20px;
+    font-family: Roboto;
+    font-weight: bold;
+    color:#005495;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+.SV5T_2019_item{
+    width: 291px;
+    height: 258px;
+    background-color:white;
+    border-radius: 10px;
+}
+.SV5T_2019_item .Img_SV5T_2019 img{
+    width: 271.71px;
+    height: 172.72px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.Img_SV5T_2019{
+    text-align: center;
+    margin-top: 10px;
+}
+.Title_SV5T_2019{
+    margin-top: 10px;
+    text-align: center;
+
+}
+.Title_SV5T_2019 h5{
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: bolder;
+    line-height: 16px;
+}
+.Title_SV5T_2019 p{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 15px;
+}
+@media only screen and (max-width: 600px) {
+    .Guong_SV5TOT{
+        width: 100%;
+    }
+    .card{
+        width: 23rem;
+    }
+    .SV5TOT_2020{
+        width: 100%;
+    }
+    .SV5T_2020_item{
+        width: 100%;
+    }
+    .SV5TOT_2019{
+        width:100%;
+    }
+    .SV5T_2019_item{
+        width: 100%;
+    }
+}
+
+

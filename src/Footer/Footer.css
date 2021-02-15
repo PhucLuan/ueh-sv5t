@@ -1,0 +1,38 @@
+.footer {
+    padding-top: 30px;
+    background-color: #005495;
+    height: 170px;
+    margin-top: 430px;
+}
+
+.footer h1, h2 {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 45.39px;
+    letter-spacing: 11%;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        position: absolute;
+        width: 414px;
+        height: 183px;
+        left: 0px;
+        background: rgba(0, 68, 120, 0.9);
+        margin-top: 30px;
+    }
+    .footer h1, h2 {
+        width: 100%;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 34.04px;
+        letter-spacing: 11%;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+    }
+}

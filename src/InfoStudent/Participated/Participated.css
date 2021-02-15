@@ -1,0 +1,39 @@
+/* ---------------------------------------------------------------------------------------- */
+
+.Title_GT {
+    margin: auto;
+}
+
+.Title_GT p {
+    text-align: center;
+    font-size: 18px;
+    color: #005495;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+.LIST_CT {
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    /* --------------------------------------------------------------------------------------- */
+    .Title_GT {
+        width: 100%;
+    }
+    .Title_GT p {
+        font-size: 14px;
+    }
+    /* --------------------------------------------------------------------------------------- */
+    .LIST_CT {
+        width: 100%;
+    }
+    .table thead tr th {
+        font-size: 12px;
+    }
+    .table thead tr.hidden-sm {
+        display: none;
+    }
+}
