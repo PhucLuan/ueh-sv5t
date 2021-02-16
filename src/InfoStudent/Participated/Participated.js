@@ -19,17 +19,17 @@ const Participated = () => {
             })
             .catch(error => console.log(error));
 
-        axios.get('https://601ce4671a9c220017060f4b.mockapi.io/HocTapTots')
-            .then(res => {
-                setHocTapTots([...res.data]);
-            })
-            .catch(error => console.log(error));
+        // axios.get('https://601ce4671a9c220017060f4b.mockapi.io/HocTapTots')
+        //     .then(res => {
+        //         setHocTapTots([...res.data]);
+        //     })
+        //     .catch(error => console.log(error));
     }, [])
 
     //Đạo đức tốt
     const RenDaoDucTot = DaoDucTots.map((obj, i) => {
         return (
-            <tr>
+            <tr key = {i}>
                 <th className="text-center" scope="row">{i + 1}</th>
                 <td className="text-center">{obj.Time}</td>
                 <td>{obj.Activity}</td>
@@ -38,16 +38,16 @@ const Participated = () => {
         );
     });
 
-    const RenHocTapTot = HocTapTots.map((obj, i) => {
-        return (
-            <tr>
-                <th className="text-center" scope="row">{i + 1}</th>
-                <td className="text-center">{obj.Time}</td>
-                <td>{obj.Activity}</td>
-                <td>{obj.Note}</td>
-            </tr>
-        );
-    });
+    // const RenHocTapTot = HocTapTots.map((obj, i) => {
+    //     return (
+    //         <tr>
+    //             <th className="text-center" scope="row">{i + 1}</th>
+    //             <td className="text-center">{obj.Time}</td>
+    //             <td>{obj.Activity}</td>
+    //             <td>{obj.Note}</td>
+    //         </tr>
+    //     );
+    // });
 
     return(
         <div className = "Participated">
@@ -102,7 +102,7 @@ const Participated = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {RenHocTapTot}
+                                {/* {RenHocTapTot} */}
                             </tbody>
                         </table>
                     </div>

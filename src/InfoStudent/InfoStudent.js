@@ -13,8 +13,8 @@ const InfoStudent = (props) => {
     const [Criterias, setCriterias] = useState([]);
 
     useEffect(() => {
-        
-        axios.get('https://601ce4671a9c220017060f4b.mockapi.io/ImpleProgress')
+        //https://601ce4671a9c220017060f4b.mockapi.io/ImpleProgress
+        axios.get('http://localhost:54178/api/OperationProgress/31171025965')
             .then(res => {
                 setCriterias([...res.data]);
             })
@@ -22,11 +22,12 @@ const InfoStudent = (props) => {
     }, [])
 
     const RenCriterias = Criterias.map( (Criteria,index) => {
+        console.log(Criterias.length);
         return(
             <NavLink to={`${props.match.url}/${Criteria.Lable}`} key = {index}>
                 <CircularProgressWithLabel 
-                    Name = {Criteria.Name} 
-                    value={Criteria.Percent} />
+                    Name = {Criteria.Key} 
+                    value={Criteria.Value} />
             </NavLink>
         );
     } );
