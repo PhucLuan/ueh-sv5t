@@ -1,3 +1,4 @@
+import '../TimelineActivity/TimelineActivity.css'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import React, { useState, useEffect } from 'react';
@@ -5,51 +6,62 @@ import axios from 'axios';
 import CheckIcon from '@material-ui/icons/Check';
 import ClearIcon from '@material-ui/icons/Clear';
 
-const TimelineActivity = () => {
+const TimelineActivity = (props) => {
 
     const [Activitys, setActivitys] = useState([]);
 
     useEffect(() => {
-        
-        axios.get('https://601ce4671a9c220017060f4b.mockapi.io/RequiredActivity')
-            .then(res => {
-                setActivitys([...res.data]);
-            })
-            .catch(error => console.log(error));
+        if (props.TypeActivity == "Require") {
+            //https://601ce4671a9c220017060f4b.mockapi.io/RequiredActivity
+            axios.get('http://localhost:54178/api/TimelineActivity/DDT/true')
+                .then(res => {
+                    setActivitys([...res.data]);
+                })
+                .catch(error => console.log(error));
+        }
+        else{
+            axios.get('http://localhost:54178/api/TimelineActivity/DDT/false')
+                .then(res => {
+                    setActivitys([...res.data]);
+                })
+                .catch(error => console.log(error));
+        }
+
     }, [])
 
     const ListActivity = Activitys.map(
         (activity, index) => {
 
-            if (activity.IsComplete === true) {
-                
-                return(
+            if (activity.isComplete === true) {
+
+                return (
                     <VerticalTimelineElement
-                    key = {index}
-                    className="vertical-timeline-element--work"
-                    contentStyle={{ borderTop: '7px solid rgb(16, 204, 82)', color: 'black' }}
-                    contentArrowStyle={{ borderRight: '7px solid  rgb(16, 204, 82' }}
-                    iconStyle={{ background: 'rgb(16, 204, 82', color: '#fff' }}
-                    icon={<CheckIcon />}
-                >
-                    <h4 className="vertical-timeline-element-subtitle">{activity.Name}</h4>
-                    <p>{activity.Description}</p>
-                </VerticalTimelineElement>
+                        key={index}
+                        className="vertical-timeline-element--work"
+                        style = { {padding : '1em'} }
+                        contentStyle={{ borderTop: '7px solid rgb(16, 204, 82)', color: 'black' }}
+                        contentArrowStyle={{ borderRight: '7px solid  rgb(16, 204, 82' }}
+                        iconStyle={{ background: 'rgb(16, 204, 82', color: '#fff' }}
+                        icon={<CheckIcon />}
+                    >
+                        {/* <h4 className="vertical-timeline-element-subtitle">{activity.Name}</h4> */}
+                        <p>{activity.name}</p>
+                    </VerticalTimelineElement>
                 );
 
             } else {
-                return(
+                return (
                     <VerticalTimelineElement
-                key = {index}
-                className="vertical-timeline-element--work"
-                contentStyle={{ borderTop: '7px solid #EC4520', color: 'black' }}
-                contentArrowStyle={{ borderRight: '7px solid  #EC4520' }}
-                iconStyle={{ background: '#EC4520', color: '#fff' }}
-                icon={<ClearIcon />}
-            >
-                <h4 className="vertical-timeline-element-subtitle">{activity.Name}</h4>
-                <p>{activity.Description}</p>
-            </VerticalTimelineElement>
+                        key={index}
+                        className="vertical-timeline-element--work"
+                        contentStyle={{ borderTop: '7px solid #EC4520', color: 'black' }}
+                        contentArrowStyle={{ borderRight: '7px solid  #EC4520' }}
+                        iconStyle={{ background: '#EC4520', color: '#fff' }}
+                        icon={<ClearIcon />}
+                    >
+                        {/* <h4 className="vertical-timeline-element-subtitle">{activity.Name}</h4> */}
+                        <p>{activity.name}</p>
+                    </VerticalTimelineElement>
                 );
             }
         }
@@ -103,7 +115,7 @@ const TimelineActivity = () => {
                 <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
                 <p>Creative Direction, User Experience, Visual Design, Project Management, Team Leading</p>
             </VerticalTimelineElement> */}
-            
+
         </VerticalTimeline>
     );
 }

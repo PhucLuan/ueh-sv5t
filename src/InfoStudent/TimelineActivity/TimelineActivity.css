@@ -1,0 +1,8 @@
+.vertical-timeline::before{
+    background: #C4C4C4 !important;
+}
+@media only screen and (min-width: 1170px){
+    .vertical-timeline--two-columns .vertical-timeline-element-content{
+        padding: 1em !important;
+    }
+}
