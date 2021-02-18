@@ -1,4 +1,4 @@
-import '../News/News.css';
+import './News.css';
 import areaimg1 from "./Img/area-img1.png";
 import contentpic from "./Img/contentpic.png";
 import smallcontent1 from "./Img/small-content1.png";

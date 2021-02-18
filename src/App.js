@@ -1,16 +1,15 @@
 import './App.css';
 import React, {useState, useEffect } from 'react';
-import Logoueh from './NavBar/Logoueh.png';
-import ExamplaryStu from './ExamplaryStu/ExamplaryStu';
-import News from './News/News';
-import Footer from './Footer/Footer';
-import InfoEvent from './InfoEvent/InfoEvent';
-import NotFound from './NotFound/NotFound'
-import Calendar from './Calendar/Calendar';
-import InfoStudent from './InfoStudent/InfoStudent';
-import TimelineActivity from './InfoStudent/TimelineActivity/TimelineActivity';
+import Logoueh from './components/NavBar/Logoueh.png';
+import ExamplaryStu from './components/ExamplaryStu/ExamplaryStu';
+import News from './components/News/News';
+import Footer from './components/Footer/Footer';
+import InfoEvent from './components/InfoEvent/InfoEvent';
+import NotFound from './components/NotFound/NotFound'
+import Calendar from './components/Calendar/Calendar';
+import InfoStudent from './components/InfoStudent/InfoStudent';
+import TimelineActivity from './components/InfoStudent/TimelineActivity/TimelineActivity';
 import {BrowserRouter as Router, Switch, Route,  Link} from "react-router-dom";
-import Helmet from 'react-helmet';
 
 
 function App() {
@@ -86,9 +85,6 @@ function App() {
               <input type="search" className="search-data" placeholder="Tìm kiếm" required />
               <button type="submit" className="fas fa-search"></button>
             </form>
-            <Helmet>
-              <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-            </Helmet>
           </nav>
 
           

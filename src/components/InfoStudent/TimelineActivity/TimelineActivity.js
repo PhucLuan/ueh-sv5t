@@ -1,4 +1,4 @@
-import '../TimelineActivity/TimelineActivity.css'
+import './TimelineActivity.css'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import React, { useState, useEffect } from 'react';
@@ -32,7 +32,7 @@ const TimelineActivity = (props) => {
     const ListActivity = Activitys.map(
         (activity, index) => {
 
-            if (activity.isComplete === true) {
+            if (activity.IsComplete === true) {
 
                 return (
                     <VerticalTimelineElement
@@ -45,7 +45,7 @@ const TimelineActivity = (props) => {
                         icon={<CheckIcon />}
                     >
                         {/* <h4 className="vertical-timeline-element-subtitle">{activity.Name}</h4> */}
-                        <p>{activity.name}</p>
+                        <p>{activity.Name}</p>
                     </VerticalTimelineElement>
                 );
 
@@ -60,7 +60,7 @@ const TimelineActivity = (props) => {
                         icon={<ClearIcon />}
                     >
                         {/* <h4 className="vertical-timeline-element-subtitle">{activity.Name}</h4> */}
-                        <p>{activity.name}</p>
+                        <p>{activity.Name}</p>
                     </VerticalTimelineElement>
                 );
             }

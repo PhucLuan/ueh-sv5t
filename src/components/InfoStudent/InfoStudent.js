@@ -22,7 +22,7 @@ const InfoStudent = (props) => {
     }, [])
 
     const RenCriterias = Criterias.map( (Criteria,index) => {
-        console.log(Criterias.length);
+        
         return(
             <NavLink to={`${props.match.url}/${Criteria.Lable}`} key = {index}>
                 <CircularProgressWithLabel 
