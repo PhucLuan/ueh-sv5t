@@ -2,7 +2,6 @@
     padding-top: 30px;
     background-color: #005495;
     height: 170px;
-    margin-top: 430px;
 }
 
 .footer h1, h2 {
@@ -14,6 +13,12 @@
     text-align: center;
     color: #fff;
     display: inline-block;
+}
+
+@media (max-width: 2000px){
+    .footer {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 768px) {

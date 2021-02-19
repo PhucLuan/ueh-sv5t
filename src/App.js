@@ -9,6 +9,8 @@ import NotFound from './components/NotFound/NotFound'
 import Calendar from './components/Calendar/Calendar';
 import InfoStudent from './components/InfoStudent/InfoStudent';
 import TimelineActivity from './components/InfoStudent/TimelineActivity/TimelineActivity';
+import ProfileSV from './components/InfoStudent/ProfileSV/ProfileSV';
+import DetailInfo from './components/InfoStudent/DetailInfo/DetailInfo';
 import {BrowserRouter as Router, Switch, Route,  Link} from "react-router-dom";
 
 
@@ -64,7 +66,7 @@ function App() {
 
   return (
     <div>
-      <Router>
+      <Router className = "RouterApp">
         <div className="SV5Tapp">
           <nav className={NavBar ? 'NavBar active' : 'NavBar'} style={NavStyle}>
             <div className="menu-icon">
@@ -95,6 +97,8 @@ function App() {
             <Route exact path="/Calendar" component={Calendar}/>
             <Route exact path="/InfoStudent" component={InfoStudent}/>
             <Route exact path="/InfoStudent/1" component={TimelineActivity}/>
+            <Route exact path="/InfoStudent/ProfileSV" component={ProfileSV}/>
+            <Route exact path="/InfoStudent/DetailInfo" component={DetailInfo}/>
             <Route component={NotFound} />
           </Switch>
 

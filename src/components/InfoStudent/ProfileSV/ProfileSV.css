@@ -1,0 +1,159 @@
+
+.content-tieuchi a{
+	text-decoration: none;
+}
+
+.sub-menu-hssv{
+	 list-style: none;
+	 padding: 0;
+	 margin: 0;
+ }
+
+.container-hssv{
+	max-width: 80%;
+    margin-top: 30px;
+} 
+
+.left-hssv{
+	background-color: #ffffff;
+	border-radius: 4px;
+	top: 0;
+	position: sticky;
+}
+.left-content-hssv p{
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: #FF6D4D;
+	padding: 20px;
+}
+.sub-menu-hssv li{
+	padding: 10px 20px;
+	border-radius: 3px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.055em;
+	
+	cursor: pointer;
+}
+.sub-menu-hssv li:hover{
+	background-color: #FF6D4D;
+	color: #FFFFFF;
+}
+.sub-menu-hssv li:hover a{
+	text-decoration: none;
+}
+.right-hssv{
+	background-color: #ffffff;
+	border-radius: 4px;
+}
+.right-header-hssv{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 40px;
+	color: #FF6D4D;
+}
+.form-hssv{
+	margin-top: 10px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	padding: 40px;
+}
+.form-hssv label ,.form-hssv p{
+	display: inline-block;
+}
+.form-hssv label{
+	width: 120px;
+}
+
+.form-content label,.form-hssv p{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 112.19%;
+	/* or 17px */
+	letter-spacing: 0.03em;
+	color: rgba(0, 0, 0, 0.65);
+}
+.image-hssv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 40px;
+}
+.image-hssv img{
+	width: 20%;
+}
+.content-tieuchi{
+	margin-top: 10px;
+	background-color: #ffffff;
+	border-radius: 4px;
+}
+.content-tieuchi p{
+	padding: 25px;
+	color: #FF6D4D;
+}
+.table-hssv table{
+	width: 100%;
+	border-bottom: 1px solid rgb(197, 193, 193);
+	
+}
+.table-hssv{
+	margin-bottom: 0;
+}
+thead tr{
+	background: #CFD7DE;
+	border-radius: 3px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 20px;
+	color: #005495;
+}
+tr td{
+	text-align: center;
+}
+.active-sub-menu-hssv{
+	background-color: #FF6D4D;
+	color: white;
+}
+.active-sub-menu-hssv a{
+	
+	color: white;
+}
+.tieuchi a{
+	color: #FF6D4D;
+	font-size: 15px;
+	line-height: 18px;
+	
+}
+.aa{
+	padding: 20px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 18px;
+	cursor: pointer;
+
+color: #FF6D4D;
+}
+@media only screen and (max-width: 768px) {
+	.form-hssv{
+		margin-bottom: 10px;
+	}
+	.sub-menu-hssv{
+		display: none;
+	}
+ }
+
+ 
+@media only screen and (max-width: 768px) {
+
+	.container-hssv{
+		max-width: 100%;
+	}
+ }

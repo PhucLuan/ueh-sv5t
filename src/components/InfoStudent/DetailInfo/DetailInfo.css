@@ -1,0 +1,180 @@
+.DetailInfo{
+    margin-top: 30px;
+}
+/* , p, h1, h2, h3, h4, h5, h6 */
+.sub-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.left {
+	background-color: #ffffff;
+	border-radius: 4px;
+	top: 0;
+	position: sticky;
+}
+
+.left-content p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: #FF6D4D;
+	padding: 20px;
+}
+
+.sub-menu li {
+	padding: 10px 20px;
+	border-radius: 3px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.055em;
+	cursor: pointer;
+}
+
+.sub-menu li a {
+	text-decoration: none;
+}
+
+.sub-menu li:hover {
+	background-color: #FF6D4D;
+	color: #FFFFFF;
+}
+
+.sub-menu li:hover a {
+	text-decoration: none;
+}
+
+.right {
+	background-color: #ffffff;
+	border-radius: 4px;
+}
+
+.right-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 40px;
+	color: #FF6D4D;
+}
+
+.right-header-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-outline-warning {
+	color: #FF6D4D;
+	border-color: #FF6D4D;
+}
+
+.btn-outline-warning:hover {
+	color: white;
+	border-color: #FF6D4D;
+	background-color: #FF6D4D;
+}
+
+.form-container {
+	margin-top: 10px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	padding: 40px;
+	padding-bottom: 10px;
+}
+
+.form-group label {
+	display: inline-block;
+	width: 120px;
+}
+
+.form-content-chuc-vu {
+	background-color: #ffffff;
+	border-radius: 4px;
+	padding: 40px;
+	padding-bottom: 10px;
+	margin-top: 4px;
+}
+
+.form-content label,
+.form-content p {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 112.19%;
+	/* or 17px */
+	letter-spacing: 0.03em;
+	color: rgba(0, 0, 0, 0.65);
+}
+
+.form-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+
+.avatar {
+	text-align: center;
+}
+
+.form-img .avatar img {
+	width: 50%;
+}
+
+.change-avatar p {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.content-ul {
+	margin-top: 10px;
+	padding: 40px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.tieuchi-one {
+	background-color: #ffffff;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.tieuchi-two {
+	background-color: #ffffff;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.title-form {
+	margin-top: -10px;
+	padding: 20px;
+	padding-top: 0;
+	margin-bottom: 40px;
+}
+
+.title-form p {
+	color: #FF6D4D;
+}
+
+.active-sub-menu {
+	background-color: #FF6D4D;
+	color: white;
+}
+
+.active-sub-menu a {
+	color: white;
+}
+
+.sub-menu-info {
+	display: none;
+}
+
+@media only screen and (max-width: 500px) {
+	.sub-menu {
+		display: none;
+	}
+}

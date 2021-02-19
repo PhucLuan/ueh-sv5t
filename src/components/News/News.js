@@ -43,7 +43,7 @@ const News = () => {
                 "Học tập tốt - Đạo đức tốt - Kỹ năng tốt - Hội nhập tốt - Thể lực tốt". Quy định về tiêu chuẩn xét chọn Danh
                 hiệu "Sinh viên 5 tốt" của trường Đại Học Kinh tế thành phố Hồ Chí Minh do Ban Thư ký Hội sinh viên Việt Nam
                 trường Đại học Kinh tế TP.Hồ Chí Minh ban hành. Danh hiệu được áp dụng cho cá nhân là sinh viên Việt Nam hệ Đại
-        học chính quy đang học tập tại trường.</p>
+                học chính quy đang học tập tại trường.</p>
             </div>
             {/* <!-- Chương trình nổi bật --> */}
             <div className="area-news-1">
@@ -62,7 +62,7 @@ const News = () => {
                     </div>
                     <div className="bigcontent-text">
                         <p> Các bạn sinh viên khi xem livestream và tham gia bình chọn sẽ được tính là tham gia Vòng Chung Kết và được
-            cập nhật mã vạch. </p>
+                    cập nhật mã vạch. </p>
                     </div>
                 </div>
                 <div className="small-content">

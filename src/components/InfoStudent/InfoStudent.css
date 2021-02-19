@@ -10,10 +10,14 @@ background-color: #EDF3F8;
     background-color:#edf3f8 !important;
 } */
 /* ----------------------------------------------------------------------------------- */
-.PROFITE_SV5TOT{
-    background-color:white;
-    margin: auto;
+.container.Info{
+    background-color: white;
     border-radius: 10px;
+}
+
+.PROFITE_SV5TOT{
+    /* background-color:white; */
+    margin: auto;
 }
 .Profile{
     border-right: 0.865117px solid rgba(0, 0, 0, 0.2);

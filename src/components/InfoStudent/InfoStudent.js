@@ -3,12 +3,14 @@ import error from '../InfoStudent/Img/error.png';
 import '../InfoStudent/InfoStudent.css';
 import CircularProgressWithLabel from '../CircularProgress/CircularProgressWithLabel';
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink, Redirect } from "react-router-dom";
 import GroupTimeLine from './GroupTimeLine/GroupTimeLine';
 import InforStuDefault from './InforStuDefault/InforStuDefault';
 import axios from 'axios';
 
 const InfoStudent = (props) => {
+
+    const [isActiveLink, setActiveLink] = useState();
 
     const [Criterias, setCriterias] = useState([]);
 
@@ -20,6 +22,10 @@ const InfoStudent = (props) => {
             })
             .catch(error => console.log(error));
     }, [])
+
+    if (isActiveLink === true) {
+        return(<Redirect to="/InfoStudent/ProfileSV" />);
+    }
 
     const RenCriterias = Criterias.map( (Criteria,index) => {
         
@@ -33,7 +39,7 @@ const InfoStudent = (props) => {
     } );
     // console.log(props.match);
     return (
-        <Router className="container InfoStudent">
+        <Router className= "InfoStudent">
             <div className="PROFITE_SV5TOT">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <div className="container-fluid">
@@ -50,7 +56,8 @@ const InfoStudent = (props) => {
                         </div>
                     </div>
                 </nav>
-                <div className="row mt-5">
+                <div className = "container Info">
+                <div className="row mt-5 InfoHead">
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 Profile">
                         <div className="row mt-4">
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
@@ -62,7 +69,12 @@ const InfoStudent = (props) => {
                                 <div className="Title_Profile">
                                     <h1>Họ tên SV</h1>
                                     <p>Thêm châm ngôn sống</p>
-                                    <button type="button" className="btn btn-outline-danger">Thông Tin Cá Nhân</button>
+                                    <button 
+                                        type="button" 
+                                        className="btn btn-outline-danger"
+                                            onClick={() => setActiveLink(true)}>
+                                            Thông Tin Cá Nhân
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -84,11 +96,15 @@ const InfoStudent = (props) => {
                         {RenCriterias}
                     </div>
                 </div>
+                </div>
+                
             </div>
-
-            <Route exact path="/InfoStudent" component={InforStuDefault} />
-            <Route exact path="/InfoStudent/:Lable" component={GroupTimeLine} />
-
+            
+            <div className = "InfoStudentBody">
+                <Route exact path="/InfoStudent" component={InforStuDefault} />
+                <Route exact path="/InfoStudent/:Lable" component={GroupTimeLine} />
+            </div>
+            
             {/* <!-- ------------------------------------------------------------------------------------------------------> */}
             
         </Router>

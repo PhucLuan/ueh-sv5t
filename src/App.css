@@ -1,3 +1,7 @@
+body{
+    background-color: #edf3f8;
+}
+
 .NavBar {
     display: flex;
     flex-wrap: wrap;
@@ -6,6 +10,7 @@
     height: 70px;
     padding: 0 50px;
     transition: 1.4s;
+    background: white;
 }
 
 .NavBar.active{

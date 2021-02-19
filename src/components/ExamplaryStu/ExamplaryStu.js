@@ -57,7 +57,7 @@ const ExamplaryStu = () => {
     }
     var Demo = [];
     return (
-        <div className="cpnExamplaryStu">
+        <div className="container cpnExamplaryStu">
             <div className="ExamplaryStu">
                 <div className="Guong_SV5TOT mt-5 mb-5">
                     {/* <div className="row ">
@@ -102,7 +102,7 @@ const ExamplaryStu = () => {
                     </Swiper> */}
                 </div>
                 {/* <!-- ---------------------------------------------------------------------------------------------------------> */}
-                <div className="SV5TOT_2020">
+                <div className="container SV5TOT_2020">
                     <div className="row">
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div className="Title_SV5TOT_2020">
