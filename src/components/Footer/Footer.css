@@ -15,12 +15,6 @@
     display: inline-block;
 }
 
-@media (max-width: 2000px){
-    .footer {
-        margin-top: 30px;
-    }
-}
-
 @media (max-width: 768px) {
     .footer {
         position: absolute;
@@ -28,7 +22,6 @@
         height: 183px;
         left: 0px;
         background: rgba(0, 68, 120, 0.9);
-        margin-top: 30px;
     }
     .footer h1, h2 {
         width: 100%;

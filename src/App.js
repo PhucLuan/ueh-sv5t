@@ -8,6 +8,7 @@ import InfoEvent from './components/InfoEvent/InfoEvent';
 import NotFound from './components/NotFound/NotFound'
 import Calendar from './components/Calendar/Calendar';
 import InfoStudentContainer from './components/InfoStudent/InfoStudentContainer/InfoStudentContainer';
+import RegisAndLogin from './components/RegisAndLogin/RegisAndLogin';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
@@ -22,7 +23,7 @@ function App() {
             <Route exact path="/InfoStudentContainer" component={InfoStudentContainer} />
             <div>
               <NavBar />
-              <Route exact path="/" exact component={Homepage} />
+              <Route exact path="/" exact component={RegisAndLogin} />
               <Route exact path="/News" exact component={News} />
               <Route exact path="/ExamplaryStu/" component={ExamplaryStu} />
               <Route exact path="/InfoEvent/" component={InfoEvent} />

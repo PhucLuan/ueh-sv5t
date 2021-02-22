@@ -32,16 +32,10 @@ const ListExamplaryStu = props => {
             slidesPerColumn={2}
             slidesPerColumnFill="row"
             breakpoints={{
-                320: {
+                600: {
                     slidesPerView: 1,
                     slidesPerColumn: 3,
-                    slidesPerColumnFill: 'row',
-                    spaceBetween: 5,
-                },
-                600: {
-                    slidesPerView: 3,
-                    slidesPerColumn: 2,
-                    slidesPerColumnFill: 'row',
+                    //slidesPerColumnFill: 'row',
                     spaceBetween: 5,
                 },
                 1000: {
