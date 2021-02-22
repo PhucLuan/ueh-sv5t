@@ -2,7 +2,6 @@ import './style.css'
 import log from './Img/log.svg';
 import register from './Img/register.svg';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
 const RegisAndLogin = () => {
 
@@ -16,26 +15,26 @@ const RegisAndLogin = () => {
         GetToken();
     }
 
-    function GetToken(){
+    function GetToken() {
+        var myHeaders = new Headers();
+        myHeaders.append("Cookie", ".AspNetCore.Identity.Application=CfDJ8H6WXzF55y1NtxBU_nMtEQuQCUlyQ2wYIWKD2TAA3bxBkGWkxhg1bEEWcFSFeGE-qDvMVFRAkkK7_pFM3PpuX5t_1WAtR5BFhu08wu1NmtMAzqk-ccoW6UtUYfmyq596BGCyvRjfRCWfu3fmV4vkEODc9x4YrptzByWuAC7l-IcuPLb3_RK046z1uqt8fU0SviVpDxbLU1w3WV8MUted95Dj_ESHDHfB6Ct4sHcyrsFbGCf6XpZIgTguyuN370nmDlQ-VVLRYapVZi7H-9aQvfdee2xV4gXBL_6SorcKnv2sy0NenpR0abBVz_0OEnkaPugfuoa5mxxmWkScDRX8s3bDuVqHdbIlp5FJpb3x2aD23hzsqCkXLyoCzNh2uU-R7fObn3D-g_IN9Qhv1UnJxcMKcjM5QxYq8RQRAGA9QsMOxkwqMlkqJPm03RzDFcJ4Zj21jv1oLy5Hnb8lbHYFv_1o-10BZ8E0HtePCbf1ktZqNfL8Iw3kuWRAI5xrKP0TwfogWoWYaRdBWgJN4rningA10YNCjxOLVImuQFH7DkSwic9PcdE2bo8K65cAm6K0D1eMqynjo8zj2_1AzKJaBMs1kx9R0C3ls4rOpZcX0SypCjQcjDYWd17e2Z8V2FmGEA");
 
-        axios({
-            method: 'post',
-            url: 'http://localhost:54178/api/Users/authenticate',
-            data: {
-                "UserName": email,
-                "Password": password,
-                "RememberMe": true
-              },
-            headers: {'Content-Type': 'multipart/form-data' }
-            })
-            .then(function (response) {
-                //handle success
-                alert(response);
-            })
-            .catch(function (response) {
-                //handle error
-                alert(response);
-            });
+        var formdata = new FormData();
+        formdata.append("UserName", email);
+        formdata.append("Password", password);
+        formdata.append("RememberMe", "true");
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: formdata,
+            redirect: 'follow'
+        };
+
+        fetch("http://localhost:54178/api/Users/authenticate", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
     }
 
     useEffect(() => {
@@ -62,12 +61,12 @@ const RegisAndLogin = () => {
                             <div className="input-field">
                                 <i className="fas fa-user"></i>
                                 <input type="text" placeholder="Username"
-                                onChange={(e) => setEmail(e.target.value)} />
+                                    onChange={(e) => setEmail(e.target.value)} />
                             </div>
                             <div className="input-field">
                                 <i className="fas fa-lock"></i>
                                 <input type="password" placeholder="Password"
-                                onChange={(e) => setPassword(e.target.value)} />
+                                    onChange={(e) => setPassword(e.target.value)} />
                             </div>
                             <input type="submit" value="Đăng nhập" className="Mybtn solid" />
                             <p className="social-text">Hoặc đăng ký với</p>
