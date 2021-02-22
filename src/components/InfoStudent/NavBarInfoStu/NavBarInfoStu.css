@@ -1,0 +1,17 @@
+.NavBarInfoStu.active{
+    position: fixed;
+    top: 0px;
+    width: -webkit-fill-available;
+    z-index: 2;
+    transition-duration: 1.6s;
+}
+
+@media (max-width: 768px) {
+    .MuiCircularProgress-root.MuiCircularProgress-determinate{
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .margin-mobile{
+        height: 198px;
+    }
+}

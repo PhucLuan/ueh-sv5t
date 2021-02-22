@@ -102,11 +102,26 @@ const ProfileSV = () => {
 					</div>
 
 					<div className="content-tieuchi">
+					{/* <p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-bs-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+  </div>
+</div> */}
 						<div className="tieuchi-one" id="DDT">
+							<p>
 							<a data-bs-toggle="collapse" href="#table-one" role="button"
 								aria-expanded="false" aria-controls="table-one">
-								<p>Tiêu chí Đạo đức tốt</p>
+								Tiêu chí Đạo đức tốt
 							</a>
+							</p>
 							<div className="collapse" id="table-one">
 								<div className="card-body">
 									<table className="table">
@@ -133,12 +148,14 @@ const ProfileSV = () => {
 								</div>
 							</div>
 						</div>
-						<div className="tieuchi-tow" id="HTT">
-							<a data-bs-toggle="collapse" href="#table-tow" role="button"
-								aria-expanded="false" aria-controls="table-tow">
-								<p>Tiêu chí Học tập tốt</p>
+						<div className="tieuchi-two" id="HTT">
+							<p>
+							<a data-bs-toggle="collapse" href="#table-two" role="button"
+								aria-expanded="false" aria-controls="table-two">
+								Tiêu chí Học tập tốt
 							</a>
-							<div className="collapse" id="table-tow">
+							</p>
+							<div className="collapse" id="table-two">
 								<div className="card-body">
 									<table className="table">
 										<thead>
@@ -165,10 +182,12 @@ const ProfileSV = () => {
 							</div>
 						</div>
 						<div className="tieuchi-three" id="TLT">
+							<p>
 							<a data-bs-toggle="collapse" href="#table-three" role="button"
 								aria-expanded="false" aria-controls="table-three">
-								<p>Tiêu chí Thể lực tốt</p>
+								Tiêu chí Thể lực tốt
 							</a>
+							</p>
 							<div className="collapse" id="table-three">
 								<div className="card-body">
 									<table className="table">
@@ -196,10 +215,12 @@ const ProfileSV = () => {
 							</div>
 						</div>
 						<div className="tieuchi-four" id="HNT">
+							<p>
 							<a data-bs-toggle="collapse" href="#table-four" role="button"
 								aria-expanded="false" aria-controls="table-four">
-								<p>Tiêu chí Hội nhập tốt</p>
+								Tiêu chí Hội nhập tốt
 							</a>
+							</p>
 							<div className="collapse" id="table-four">
 								<div className="card-body">
 									<table className="table">
@@ -227,10 +248,12 @@ const ProfileSV = () => {
 							</div>
 						</div>
 						<div className="tieuchi-five" id="TNT">
+							<p>
 							<a data-bs-toggle="collapse" href="#table-five" role="button"
 								aria-expanded="false" aria-controls="table-five">
-								<p>Tiêu chí Tình nguyện tốt</p>
+								Tiêu chí Tình nguyện tốt
 							</a>
+							</p>
 							<div className="collapse" id="table-five">
 								<div className="card-body">
 									<table className="table">

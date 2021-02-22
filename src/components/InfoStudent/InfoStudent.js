@@ -3,7 +3,7 @@ import error from '../InfoStudent/Img/error.png';
 import '../InfoStudent/InfoStudent.css';
 import CircularProgressWithLabel from '../CircularProgress/CircularProgressWithLabel';
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, NavLink, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import GroupTimeLine from './GroupTimeLine/GroupTimeLine';
 import InforStuDefault from './InforStuDefault/InforStuDefault';
 import axios from 'axios';
@@ -24,38 +24,23 @@ const InfoStudent = (props) => {
     }, [])
 
     if (isActiveLink === true) {
-        return(<Redirect to="/InfoStudent/ProfileSV" />);
+        return(<Redirect to="/InfoStudentContainer/ProfileSV" />);
     }
 
     const RenCriterias = Criterias.map( (Criteria,index) => {
         
         return(
-            <NavLink to={`${props.match.url}/${Criteria.Lable}`} key = {index}>
+            <Link to={`${props.match.url}/${Criteria.Lable}`} key = {index}>
                 <CircularProgressWithLabel 
                     Name = {Criteria.Key} 
                     value={Criteria.Value} />
-            </NavLink>
+            </Link>
         );
     } );
-    // console.log(props.match);
+    //console.log(props.match.url);
     return (
         <Router className= "InfoStudent">
             <div className="PROFITE_SV5TOT">
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <div className="container-fluid">
-                        <a className="navbar-brand" href="#">Navbar</a>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div className="navbar-nav">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
-                                <a className="nav-link" href="#">Features</a>
-                                <a className="nav-link" href="#">Pricing</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
                 <div className = "container Info">
                 <div className="row mt-5 InfoHead">
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 Profile">
@@ -87,12 +72,7 @@ const InfoStudent = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 margin-mobile">
-                        {/* <NavLink to="/InfoStudent/1"><CircularProgressWithLabel Name = "Hoc tap tot" value="90" /></NavLink>
-                        <CircularProgressWithLabel value="90" />
-                        <CircularProgressWithLabel value="90" />
-                        <CircularProgressWithLabel value="90" />
-                        <CircularProgressWithLabel value="90" /> */}
+                    <div className="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 margin-mobile">
                         {RenCriterias}
                     </div>
                 </div>
@@ -101,8 +81,8 @@ const InfoStudent = (props) => {
             </div>
             
             <div className = "InfoStudentBody">
-                <Route exact path="/InfoStudent" component={InforStuDefault} />
-                <Route exact path="/InfoStudent/:Lable" component={GroupTimeLine} />
+                <Route exact path="/InfoStudentContainer" component={InforStuDefault} />
+                <Route exact path="/InfoStudentContainer/:Lable" component={GroupTimeLine} />
             </div>
             
             {/* <!-- ------------------------------------------------------------------------------------------------------> */}

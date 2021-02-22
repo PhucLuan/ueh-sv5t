@@ -1,15 +1,7 @@
 import './NavBar.css'
 import Logoueh from '../NavBar/Logoueh.png';
-import React, {useState, useEffect } from 'react';
-import ExamplaryStu from './components/ExamplaryStu/ExamplaryStu';
-import News from './components/News/News';
-import Footer from './components/Footer/Footer';
-import InfoEvent from './components/InfoEvent/InfoEvent';
-import NotFound from './components/NotFound/NotFound'
-import Calendar from './components/Calendar/Calendar';
-import InfoStudent from './components/InfoStudent/InfoStudent';
-import TimelineActivity from './components/InfoStudent/TimelineActivity/TimelineActivity';
-import {BrowserRouter as Router, Switch, Route,  Link} from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
@@ -59,44 +51,27 @@ const NavBar = () => {
         }
     }, [])
     return (
-        <div>
-            <Router>
-                <div className="SV5Tapp">
-                    <nav className={NavBar ? 'NavBar active' : 'NavBar'} style={NavStyle}>
-                        <div className="menu-icon">
-                            <span className="fas fa-bars IconToggle"></span></div>
-                        <div className="logo">
-                            <img src={Logoueh} alt="Logo" /></div>
-                        <div className="My-nav-items">
-                            <li><Link to="/">TIN TỨC</Link></li>
-                            <li><Link to="/ExamplaryStu">TẤM GƯƠNG SV5T</Link></li>
-                            <li><Link to="#">CHƯƠNG TRÌNH</Link></li>
-                            <li><Link to="/InfoStudent">ĐĂNG NHẬP | ĐĂNG KÝ</Link></li>
-                        </div>
-                        <div className="search-icon">
-                            <span className="fas fa-search IconSearch"></span></div>
-                        <div className="cancel-icon">
-                            <span className="fas fa-times"></span></div>
-                        <form action="#">
-                            <input type="search" className="search-data" placeholder="Tìm kiếm" required />
-                            <button type="submit" className="fas fa-search"></button>
-                        </form>
-                    </nav>
-
-
-                    <Switch>
-                        <Route path="/" exact component={News} />
-                        <Route exact path="/ExamplaryStu/" component={ExamplaryStu} />
-                        <Route exact path="/InfoEvent/" component={InfoEvent} />
-                        <Route exact path="/Calendar" component={Calendar} />
-                        <Route exact path="/InfoStudent" component={InfoStudent} />
-                        <Route exact path="/InfoStudent/1" component={TimelineActivity} />
-                        <Route component={NotFound} />
-                    </Switch>
-
-                </div>
-            </Router>
-            <Footer></Footer>
+        <div className = "Demo">
+        <nav className={NavBar ? 'NavBar active' : 'NavBar'} style={NavStyle}>
+            <div className="menu-icon">
+                <span className="fas fa-bars IconToggle"></span></div>
+            <div className="logo">
+                <img src={Logoueh} alt="Logo" /></div>
+            <div className="My-nav-items">
+                <li><Link to="/">TIN TỨC</Link></li>
+                <li><Link to="/ExamplaryStu">TẤM GƯƠNG SV5T</Link></li>
+                <li><Link to="#">CHƯƠNG TRÌNH</Link></li>
+                <li><Link to="/InfoStudentContainer">ĐĂNG NHẬP | ĐĂNG KÝ</Link></li>
+            </div>
+            <div className="search-icon">
+                <span className="fas fa-search IconSearch"></span></div>
+            <div className="cancel-icon">
+                <span className="fas fa-times"></span></div>
+            <form action="#">
+                <input type="search" className="search-data" placeholder="Tìm kiếm" required />
+                <button type="submit" className="fas fa-search"></button>
+            </form>
+        </nav>
         </div>
     );
 }

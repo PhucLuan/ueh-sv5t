@@ -1,6 +1,6 @@
 import Rectangle from '../Img/Rectangle 27.png';
 // import Swiper core and required modules
-import SwiperCore, { Navigation, Pagination} from 'swiper';
+import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
@@ -9,7 +9,7 @@ SwiperCore.use([Navigation, Pagination]);
 
 const carousel_InfoStudent = () => {
     return (
-        <div className = "carousel_InfoStudent">
+        <div className="carousel_InfoStudent">
             {/* <!-- ------------------------------------------------------------------------------------------------------> */}
             <div className="FILE_SV5TOT mt-5 mb-5">
                 <div className="row ">
@@ -21,7 +21,7 @@ const carousel_InfoStudent = () => {
                 <div className="container carousel-InfoStudent">
                     <Swiper
                         className="swiper-container-InfoStudent"
-                        slidesPerView={3}
+                        slidesPerView={1}
                         loop="true"
                         pagination={{ clickable: true }}
                         navigation
@@ -36,51 +36,63 @@ const carousel_InfoStudent = () => {
                         }}
                     >
                         <SwiperSlide>
-                            <div className="Img_File text-center">
-                                <img src={Rectangle} className="img-responsive" alt="Image1" />
-                            </div>
-                            <div className="Title_Img">
-                                <p>Thông tin cá nhân sinh viên</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="Img_File text-center">
-                                <img src={Rectangle} className="img-responsive" alt="Image2" />
-                            </div>
-                            <div className="Title_Img">
-                                <p>Đạo đức tốt</p>
+                            <div>
+                                <div className="Img_File text-center">
+                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image1" />
+                                </div>
+                                <div className="Title_Img">
+                                    <p>Thông tin cá nhân sinh viên</p>
+                                </div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="Img_File text-center">
-                                <img src={Rectangle} className="img-responsive" alt="Image3" />
-                            </div>
-                            <div className="Title_Img">
-                                <p>Học tập tốt</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="Img_File text-center">
-                                <img src={Rectangle} className="img-responsive" alt="Image4" />
-                            </div>
-                            <div className="Title_Img">
-                                <p>Thể lực tốt</p>
+                            <div>
+                                <div className="Img_File text-center">
+                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image2" />
+                                </div>
+                                <div className="Title_Img">
+                                    <p>Thể lực tốt</p>
+                                </div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="Img_File text-center">
-                                <img src={Rectangle} className="img-responsive" alt="Image5" />
-                            </div>
-                            <div className="Title_Img">
-                                <p>Hội nhập tốt</p>
+                            <div>
+                                <div className="Img_File text-center">
+                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image1" />
+                                </div>
+                                <div className="Title_Img">
+                                    <p>Học tập tốt</p>
+                                </div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="Img_File text-center">
-                                <img src={Rectangle} className="img-responsive" alt="Image6" />
+                            <div>
+                                <div className="Img_File text-center">
+                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image1" />
+                                </div>
+                                <div className="Title_Img">
+                                    <p>Đạo đức tốt</p>
+                                </div>
                             </div>
-                            <div className="Title_Img">
-                                <p>Tình nguyện tốt</p>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div>
+                                <div className="Img_File text-center">
+                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image1" />
+                                </div>
+                                <div className="Title_Img">
+                                    <p>Hội nhập tốt</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div>
+                                <div className="Img_File text-center">
+                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image1" />
+                                </div>
+                                <div className="Title_Img">
+                                    <p>Tình nguyện tốt</p>
+                                </div>
                             </div>
                         </SwiperSlide>
                     </Swiper>
