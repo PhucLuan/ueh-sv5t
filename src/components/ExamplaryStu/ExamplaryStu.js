@@ -1,11 +1,9 @@
 import './ExamplaryStu.css';
-import CardStu from './CardStu/CardStu';
 import ListExamplaryStu from './ListExamplaryStu';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
 // install Swiper modules
@@ -14,29 +12,6 @@ SwiperCore.use([Navigation, Pagination]);
 const ExamplaryStu = () => {
 
     const [Students, setStudents] = useState([]);
-    
-    //const [Check, setCheck] = useState(false);
-    //Gương sv5t 2020
-    //const Students = []
-    /*{id: 1,name: "Name 1", class: "ST001", pointStudy: 9, pointActivity: 88},
-        {id: 1,name: "Name 1", class: "ST001", pointStudy: 9, pointActivity: 88},
-        {id: 1,name: "Name 1", class: "ST001", pointStudy: 9, pointActivity: 88},
-        {id: 1,name: "Name 1", class: "ST001", pointStudy: 9, pointActivity: 88},
-        {id: 1,name: "Name 1", class: "ST001", pointStudy: 9, pointActivity: 88},
-        {id: 1,name: "Name 1", class: "ST001", pointStudy: 9, pointActivity: 88},
-        {id: 1,name: "Name 1", class: "ST001", pointStudy: 9, pointActivity: 88},
-        {id: 1,name: "Name 1", class: "ST001", pointStudy: 9, pointActivity: 88}, */
-
-    // const Stu2020s = Students.map((Student) => {
-    //     return (
-    //         <SwiperSlide key={Student.id}>
-    //             <CardStu name={Student.name}
-    //                 class={Student.class}
-    //                 pointStudy={Student.pointStudy}
-    //                 pointActivity={Student.pointActivity} />
-    //         </SwiperSlide>
-    //     );
-    // });
 
     useEffect(() => {
 

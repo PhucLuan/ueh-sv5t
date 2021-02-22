@@ -55,10 +55,10 @@ const NavBar = () => {
         <nav className={NavBar ? 'NavBar active' : 'NavBar'} style={NavStyle}>
             <div className="menu-icon">
                 <span className="fas fa-bars IconToggle"></span></div>
-            <div className="logo">
-                <img src={Logoueh} alt="Logo" /></div>
+            <Link to="/" className="logo">
+                <img src={Logoueh} alt="Logo" /></Link>
             <div className="My-nav-items">
-                <li><Link to="/">TIN TỨC</Link></li>
+                <li><Link to="/News">TIN TỨC</Link></li>
                 <li><Link to="/ExamplaryStu">TẤM GƯƠNG SV5T</Link></li>
                 <li><Link to="#">CHƯƠNG TRÌNH</Link></li>
                 <li><Link to="/InfoStudentContainer">ĐĂNG NHẬP | ĐĂNG KÝ</Link></li>

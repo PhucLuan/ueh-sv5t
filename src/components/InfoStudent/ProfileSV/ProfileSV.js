@@ -6,14 +6,14 @@ import { Redirect } from "react-router-dom";
 
 const ProfileSV = () => {
 
-    const [isActiveLink, setActiveLink] = useState();
+	const [isActiveLink, setActiveLink] = useState();
 
-    if (isActiveLink === true) {
-        return(<Redirect to="/InfoStudent/DetailInfo" />);
-    }
+	if (isActiveLink === true) {
+		return (<Redirect to="/InfoStudentContainer/DetailInfo" />);
+	}
 
-    return(
-        <div className="container container-hssv">
+	return (
+		<div className="container container-hssv">
 			<div className="row">
 				<div className="col-md-4 col-12" id="navbar-Info">
 					<div className="left-hssv">
@@ -64,62 +64,49 @@ const ProfileSV = () => {
 								<img src={people} alt="sinhvien" />
 							</div>
 							<label for="">Họ và tên:</label>
-							<p>Võ Hồng Nhiển</p> <br/>
+							<p>Võ Hồng Nhiển</p> <br />
 							<label for="">MSSV:</label>
-							<p>31181022431</p> <br/>
+							<p>31181022431</p> <br />
 							<label for="">Ngày sinh</label>
-							<p>Chưa cập nhật</p> <br/>
+							<p>Chưa cập nhật</p> <br />
 							<label for="">Giới tính</label>
-							<p>Nữ</p> <br/>
+							<p>Nữ</p> <br />
 							<label for="">Lớp:</label>
-							<p>EC002</p> <br/>
+							<p>EC002</p> <br />
 							<label for="">Khóa:</label>
-							<p>K44</p> <br/>
+							<p>K44</p> <br />
 
 							<label for="">Khoa:</label>
-							<p>Chưa cập nhật</p> <br/>
+							<p>Chưa cập nhật</p> <br />
 							<label for="">Số điện thoại:</label>
-							<p>Chưa cập nhật</p> <br/>
+							<p>Chưa cập nhật</p> <br />
 							<label for="">Địa chỉ:</label>
-							<p>Chưa cập nhật</p> <br/>
+							<p>Chưa cập nhật</p> <br />
 							<label for="">CMND:</label>
-							<p>Chưa cập nhật</p> <br/>
+							<p>Chưa cập nhật</p> <br />
 							<label for="">Đoàn viên:</label>
-							<input type="checkbox"/> <br/>
+							<input type="checkbox" /> <br />
 							<label for="">Chức vụ Đoàn:</label>
-							<br/>
+							<br />
 							<label for="">Hội viên:</label>
-							<input type="checkbox"/> <br/>
+							<input type="checkbox" /> <br />
 
 							<label for="">Chức vụ Hội:</label>
-							<br/>
+							<br />
 
 							<label for="">Đảng viên:</label>
-							<input type="checkbox"/><br/>
+							<input type="checkbox" /><br />
 							<label for="">Chức vụ Đảng:</label>
-							<br/>
+							<br />
 						</div>
 					</div>
 
 					<div className="content-tieuchi">
-					{/* <p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Link with href
-  </a>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-bs-target
-  </button>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-  </div>
-</div> */}
 						<div className="tieuchi-one" id="DDT">
 							<p>
-							<a data-bs-toggle="collapse" href="#table-one" role="button"
-								aria-expanded="false" aria-controls="table-one">
-								Tiêu chí Đạo đức tốt
+								<a data-bs-toggle="collapse" href="#table-one" role="button"
+									aria-expanded="false" aria-controls="table-one">
+									Tiêu chí Đạo đức tốt
 							</a>
 							</p>
 							<div className="collapse" id="table-one">
@@ -150,9 +137,9 @@ const ProfileSV = () => {
 						</div>
 						<div className="tieuchi-two" id="HTT">
 							<p>
-							<a data-bs-toggle="collapse" href="#table-two" role="button"
-								aria-expanded="false" aria-controls="table-two">
-								Tiêu chí Học tập tốt
+								<a data-bs-toggle="collapse" href="#table-two" role="button"
+									aria-expanded="false" aria-controls="table-two">
+									Tiêu chí Học tập tốt
 							</a>
 							</p>
 							<div className="collapse" id="table-two">
@@ -183,9 +170,9 @@ const ProfileSV = () => {
 						</div>
 						<div className="tieuchi-three" id="TLT">
 							<p>
-							<a data-bs-toggle="collapse" href="#table-three" role="button"
-								aria-expanded="false" aria-controls="table-three">
-								Tiêu chí Thể lực tốt
+								<a data-bs-toggle="collapse" href="#table-three" role="button"
+									aria-expanded="false" aria-controls="table-three">
+									Tiêu chí Thể lực tốt
 							</a>
 							</p>
 							<div className="collapse" id="table-three">
@@ -216,9 +203,9 @@ const ProfileSV = () => {
 						</div>
 						<div className="tieuchi-four" id="HNT">
 							<p>
-							<a data-bs-toggle="collapse" href="#table-four" role="button"
-								aria-expanded="false" aria-controls="table-four">
-								Tiêu chí Hội nhập tốt
+								<a data-bs-toggle="collapse" href="#table-four" role="button"
+									aria-expanded="false" aria-controls="table-four">
+									Tiêu chí Hội nhập tốt
 							</a>
 							</p>
 							<div className="collapse" id="table-four">
@@ -249,9 +236,9 @@ const ProfileSV = () => {
 						</div>
 						<div className="tieuchi-five" id="TNT">
 							<p>
-							<a data-bs-toggle="collapse" href="#table-five" role="button"
-								aria-expanded="false" aria-controls="table-five">
-								Tiêu chí Tình nguyện tốt
+								<a data-bs-toggle="collapse" href="#table-five" role="button"
+									aria-expanded="false" aria-controls="table-five">
+									Tiêu chí Tình nguyện tốt
 							</a>
 							</p>
 							<div className="collapse" id="table-five">
@@ -286,6 +273,6 @@ const ProfileSV = () => {
 				</div>
 			</div>
 		</div>
-    );
+	);
 }
 export default ProfileSV;
