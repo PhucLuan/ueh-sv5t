@@ -16,7 +16,7 @@ const ListExamplaryStu = props => {
         return (
             <SwiperSlide key={Student.id}>
                 <CardStu name={Student.name}
-                    class={Student.class}
+                    className={Student.class}
                     pointStudy={Student.pointStudy}
                     pointActivity={Student.pointActivity} />
             </SwiperSlide>

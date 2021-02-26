@@ -16,7 +16,7 @@ const InfoStudent = (props) => {
 
     useEffect(() => {
         //https://601ce4671a9c220017060f4b.mockapi.io/ImpleProgress
-        axios.get('http://localhost:54178/api/OperationProgress/31171025965')
+        axios.get('https://localhost:44391/api/OperationProgress/31171025965')
             .then(res => {
                 setCriterias([...res.data]);
             })

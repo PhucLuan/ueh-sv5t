@@ -1,17 +1,82 @@
 import people from './Img/people.png'
 import './ProfileSV.css'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Redirect } from "react-router-dom";
+import { connect } from 'react-redux';
+import axios from 'axios';
+import { Info } from '@material-ui/icons';
 
-
-const ProfileSV = () => {
+const ProfileSV = (props) => {
 
 	const [isActiveLink, setActiveLink] = useState();
 
+	console.log(props.sinhVien)
+	const [InfoSinhVien, setInfoSinhVien] = useState(
+		{
+			Mssv: "",
+			HoTen: "",
+			NgaySinh: null,
+			GioiTinh: null,
+			NoiSinh: null,
+			Sdt: null,
+			Lop: null,
+			DonVi: null,
+			Khoa: null,
+			Email: "",
+			Iduser: null,
+			DonViNavigation: null,
+			IduserNavigation: null,
+			Diem: [],
+			KqTheoTieuchi: [],
+			ThamgiaChuongtrinh: [],
+			ThoidiemSvThamgia: [],
+			ThuchienTieuchuan: []
+		}
+	);
+
+	useEffect(() => {
+		var myHeaders = new Headers();
+		myHeaders.append("Cookie", ".AspNetCore.Identity.Application=CfDJ8H6WXzF55y1NtxBU_nMtEQtpwcT1Fkj6Cu5oCuq_5UszliQ1si0pXIOw6MJfK_rY4ms_iAeK8aFqcY0P2oA2kEbtgzhsrd7wPEn-1oZJ9Qx9n_igd1KGKdMWPfukN_3b1VvOohYBO_cmeCgURaXyHljyYWvdrKjxmTEX2VbRpFPy3f8Wfp7xl8IPg2LK7oCuw3RnRxw2o7KwtFFloGLwW0NgivFN_2d7dqkRZhv5uvbxL3fM6FSD6bShr4kUT9siqIWm-tWPN-rU0UwjOJ3qF1jMIrkNKdbx9IlGAETP3uY7e2kyyTE5G4D_JnUe8QraJhRNbk_Cn3lavL10RRffjZkyvsxIvcy307r2Ylcd54u7oWEinCZVsU3Ki0VHwX8JZmQ3ThIFLZQn49Lylmz6UadRjEGPSUdOB7bqdHB6Vpgy41-rCctVUcMSzNuQyb7but9LQ3-tT5z2G0ZbT5MZ-yRFKSGBLp4zDMWbQIb2TWT2IAsBH0KHvEnXPlpi-yPBthr0H1a9RWVnWXxgmn2yJLBy5bNJv5TSvMA_0uFBCXTbWWAkEmIX04tyMQ_PV_TcUoxo1Keray_196PIHiHOC1YXHxSy3XL8MRlm1gYHvIOUqB7jROBSe3-KIvWyyYFIOg");
+
+		var requestOptions = {
+			method: 'GET',
+			headers: myHeaders,
+			redirect: 'follow'
+		};
+
+		fetch("https://localhost:44391/api/SinhViens/31181020049", requestOptions)
+			.then(response => response.text())
+			.then(result => JSON.parse(result))
+			.then(res => {
+				setInfoSinhVien(
+					{
+						Mssv: res.Mssv,
+						HoTen: res.HoTen,
+						NgaySinh: res.NgaySinh,
+						GioiTinh: res.GioiTinh,
+						NoiSinh: res.NoiSinh,
+						Sdt: res.Sdt,
+						Lop: res.Lop,
+						DonVi: res.DonVi,
+						Khoa: res.Khoa,
+						Email: res.Email,
+						Iduser: null,
+						DonViNavigation: null,
+						IduserNavigation: null,
+						Diem: [],
+						KqTheoTieuchi: [],
+						ThamgiaChuongtrinh: [],
+						ThoidiemSvThamgia: [],
+						ThuchienTieuchuan: []
+					}
+				);
+			})
+			.catch(error => console.log('error', error));
+	}, [])
 	if (isActiveLink === true) {
 		return (<Redirect to="/InfoStudentContainer/DetailInfo" />);
 	}
-
+	console.log(InfoSinhVien);
 	return (
 		<div className="container container-hssv">
 			<div className="row">
@@ -63,40 +128,40 @@ const ProfileSV = () => {
 							<div className="image-hssv">
 								<img src={people} alt="sinhvien" />
 							</div>
-							<label for="">Họ và tên:</label>
-							<p>Võ Hồng Nhiển</p> <br />
-							<label for="">MSSV:</label>
-							<p>31181022431</p> <br />
-							<label for="">Ngày sinh</label>
-							<p>Chưa cập nhật</p> <br />
-							<label for="">Giới tính</label>
-							<p>Nữ</p> <br />
-							<label for="">Lớp:</label>
-							<p>EC002</p> <br />
-							<label for="">Khóa:</label>
+							<label htmlFor="">Họ và tên:</label>
+							<p>{InfoSinhVien.HoTen}</p> <br />
+							<label htmlFor="">MSSV:</label>
+							<p>{InfoSinhVien.Mssv}</p> <br />
+							<label htmlFor="">Ngày sinh</label>
+							<p>{InfoSinhVien.NgaySinh}</p> <br />
+							<label htmlFor="">Giới tính</label>
+							<p>{InfoSinhVien.GioiTinh}</p> <br />
+							<label htmlFor="">Lớp:</label>
+							<p>{InfoSinhVien.Lop}</p> <br />
+							<label htmlFor="">Khóa:</label>
 							<p>K44</p> <br />
 
-							<label for="">Khoa:</label>
-							<p>Chưa cập nhật</p> <br />
-							<label for="">Số điện thoại:</label>
-							<p>Chưa cập nhật</p> <br />
-							<label for="">Địa chỉ:</label>
-							<p>Chưa cập nhật</p> <br />
-							<label for="">CMND:</label>
-							<p>Chưa cập nhật</p> <br />
-							<label for="">Đoàn viên:</label>
+							<label htmlFor="">Khoa:</label>
+							<p>{InfoSinhVien.Khoa}</p> <br />
+							<label htmlFor="">Số điện thoại:</label>
+							<p>{InfoSinhVien.Sdt}</p> <br />
+							{/* <label htmlFor="">Địa chỉ:</label>
+							<p>{InfoSinhVien.}</p> <br /> */}
+							{/* <label htmlFor="">CMND:</label>
+							<p>Chưa cập nhật</p> <br /> */}
+							<label htmlFor="">Đoàn viên:</label>
 							<input type="checkbox" /> <br />
-							<label for="">Chức vụ Đoàn:</label>
+							<label htmlFor="">Chức vụ Đoàn:</label>
 							<br />
-							<label for="">Hội viên:</label>
+							<label htmlFor="">Hội viên:</label>
 							<input type="checkbox" /> <br />
 
-							<label for="">Chức vụ Hội:</label>
+							<label htmlFor="">Chức vụ Hội:</label>
 							<br />
 
-							<label for="">Đảng viên:</label>
+							<label htmlFor="">Đảng viên:</label>
 							<input type="checkbox" /><br />
-							<label for="">Chức vụ Đảng:</label>
+							<label htmlFor="">Chức vụ Đảng:</label>
 							<br />
 						</div>
 					</div>
@@ -275,4 +340,10 @@ const ProfileSV = () => {
 		</div>
 	);
 }
-export default ProfileSV;
+const mapStateToProps = state => {
+	return {
+		sinhVien: state.sinhVien
+	}
+}
+
+export default connect(mapStateToProps, null)(ProfileSV);

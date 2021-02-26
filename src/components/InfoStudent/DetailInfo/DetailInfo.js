@@ -46,44 +46,44 @@ const DetailInfo = () => {
                                     <li className="border-bottom active-sub-menu"><a href="#">Thông tin cơ bản</a></li>
                                 </ul>
                             </div>
-                            <div className="row info" id="table-three">
+                            <form className="row info" id="table-three">
                                 <div className="col-md-6 col-12">
                                     <div className="form-group">
-                                        <label for="exampleInputName">Họ và tên</label>
+                                        <label htmlFor="exampleInputName">Họ và tên</label>
                                         <input type="text" className="form-control" id="exampleInputName" value="Võ Hồng Nhiển" aria-describedby="emailHelp" />
                                         <small id="name" className="form-text text-muted"></small>
                                     </div>
                                     <div className="form-group">
-                                        <label for="exampleInputMssv">MSSV</label>
+                                        <label htmlFor="exampleInputMssv">MSSV</label>
                                         <input type="text" className="form-control" id="exampleInputMssv" value="31181022431" aria-describedby="emailHelp" />
                                         <small id="mssv" className="form-text text-muted"></small>
                                     </div>
                                     <div className="form-group">
-                                        <label for="exampleInputNgaysinh">Ngày sinh</label>
+                                        <label htmlFor="exampleInputNgaysinh">Ngày sinh</label>
                                         <input type="text" className="form-control" id="exampleInputNgaysinh" value="01/12/2000" aria-describedby="emailHelp" />
                                         <small id="ngaysinh" className="form-text text-muted"></small>
                                     </div>
                                     <div className="form-group">
-                                        <label for="exampleInputNoisinh">Nơi sinh</label>
+                                        <label htmlFor="exampleInputNoisinh">Nơi sinh</label>
                                         <input type="text" className="form-control" id="exampleInputNoisinh" placeholder="Nơi sinh" aria-describedby="emailHelp" />
                                         <small id="noisinh" className="form-text text-muted"></small>
                                     </div>
                                     <div className="form-group">
-                                        <label for="exampleFormControlSelect1">Giới tính</label>
+                                        <label htmlFor="exampleFormControlSelect1">Giới tính</label>
                                         <select className="form-control" id="exampleFormControlSelect1">
                                             <option>Nữ</option>
                                             <option>Nam</option>
                                         </select>
                                     </div>
                                     <div className="form-group">
-                                        <label for="exampleInputLop">Lớp</label>
+                                        <label htmlFor="exampleInputLop">Lớp</label>
                                         <input type="text" className="form-control" id="exampleInputLop" placeholder="Lớp" value="EC002" aria-describedby="emailHelp" />
                                         <small id="lop" className="form-text text-muted"></small>
                                     </div>
                                 </div>
                                 <div className="col-md-6 col-12">
                                     <div className="form-group">
-                                        <label for="exampleFormControlSelect1">Khóa</label>
+                                        <label htmlFor="exampleFormControlSelect1">Khóa</label>
                                         <select className="form-control" id="exampleFormControlSelect1">
                                             <option>K44</option>
                                             <option>K45</option>
@@ -92,7 +92,7 @@ const DetailInfo = () => {
                                         </select>
                                     </div>
                                     <div className="form-group">
-                                        <label for="exampleFormControlSelect1">Khoa</label>
+                                        <label htmlFor="exampleFormControlSelect1">Khoa</label>
                                         <select className="form-control" id="exampleFormControlSelect1">
                                             <option>Chọn</option>
                                             <option>K45</option>
@@ -101,22 +101,22 @@ const DetailInfo = () => {
                                         </select>
                                     </div>
                                     <div className="form-group">
-                                        <label for="exampleInputSdt">Số điện thoại</label>
+                                        <label htmlFor="exampleInputSdt">Số điện thoại</label>
                                         <input type="text" className="form-control" id="exampleInputSdt" placeholder="Số điện thoại" aria-describedby="emailHelp" />
                                         <small id="sdt" className="form-text text-muted"></small>
                                     </div>
                                     <div className="form-group">
-                                        <label for="exampleInputDiachi">Địa chỉ</label>
+                                        <label htmlFor="exampleInputDiachi">Địa chỉ</label>
                                         <input type="text" className="form-control" id="exampleInputDiachi" placeholder="Địa chỉ" aria-describedby="emailHelp" />
                                         <small id="diachi" className="form-text text-muted"></small>
                                     </div>
                                     <div className="form-group">
-                                        <label for="exampleInputCmnd">CMND</label>
+                                        <label htmlFor="exampleInputCmnd">CMND</label>
                                         <input type="text" className="form-control" id="exampleInputCmnd" placeholder="CMND" aria-describedby="emailHelp" />
                                         <small id="cmnd" className="form-text text-muted"></small>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
 
                         </div>
                     </div>
@@ -125,34 +125,34 @@ const DetailInfo = () => {
                         <form className="row">
                             <div className="col-md-6 col-12">
                                 <div className="form-group">
-                                    <label for="exampleInputDoanvien">Đoàn viên</label>
+                                    <label htmlFor="exampleInputDoanvien">Đoàn viên</label>
                                     <input type="checkbox" id="exampleInputDoanvien" aria-describedby="emailHelp" />
                                     <small id="doanvien" className="form-text text-muted"></small>
                                 </div>
                                 <div className="form-group">
-                                    <label for="exampleInputDoanvien">Hội viên</label>
+                                    <label htmlFor="exampleInputDoanvien">Hội viên</label>
                                     <input type="checkbox" id="exampleInputDoanvien" aria-describedby="emailHelp" />
                                     <small id="doanvien" className="form-text text-muted"></small>
                                 </div>
                                 <div className="form-group">
-                                    <label for="exampleInputDoanvien">Đảng viên</label>
+                                    <label htmlFor="exampleInputDoanvien">Đảng viên</label>
                                     <input type="checkbox" id="exampleInputDoanvien" aria-describedby="emailHelp" />
                                     <small id="doanvien" className="form-text text-muted"></small>
                                 </div>
                             </div>
                             <div className="col-md-6 col-12">
                                 <div className="form-group">
-                                    <label for="exampleInputLop">Chức vụ Đoàn</label>
+                                    <label htmlFor="exampleInputLop">Chức vụ Đoàn</label>
                                     <input type="text" className="form-control" id="exampleInputCvdoan" placeholder="Chức vụ Đoàn" aria-describedby="emailHelp" />
                                     <small id="cvdoan" className="form-text text-muted"></small>
                                 </div>
                                 <div className="form-group">
-                                    <label for="exampleInputLop">Chức vụ Hội</label>
+                                    <label htmlFor="exampleInputLop">Chức vụ Hội</label>
                                     <input type="text" className="form-control" id="exampleInputCvhoi" placeholder="Chức vụ Hội" aria-describedby="emailHelp" />
                                     <small id="cvhoi" className="form-text text-muted"></small>
                                 </div>
                                 <div className="form-group">
-                                    <label for="exampleInputLop">Chức vụ Đảng</label>
+                                    <label htmlFor="exampleInputLop">Chức vụ Đảng</label>
                                     <input type="text" className="form-control" id="exampleInputCvdang" placeholder="Chức vụ Đảng" aria-describedby="emailHelp" />
                                     <small id="cvdang" className="form-text text-muted"></small>
                                 </div>
@@ -170,17 +170,17 @@ const DetailInfo = () => {
                             </div>
                             <form id="updatepw">
                                 <div className="form-group">
-                                    <label for="exampleInputMkc">Mật khẩu cũ</label>
+                                    <label htmlFor="exampleInputMkc">Mật khẩu cũ</label>
                                     <input type="text" className="form-control" id="exampleInputMkc" placeholder="Nhập mật khẩu cũ" aria-describedby="emailHelp" />
                                     <small id="mkc" className="form-text text-muted"></small>
                                 </div>
                                 <div className="form-group">
-                                    <label for="exampleInputMkm">Mật khẩu mới</label>
+                                    <label htmlFor="exampleInputMkm">Mật khẩu mới</label>
                                     <input type="text" className="form-control" id="exampleInputMkm" placeholder="Nhập mật khẩu mới" aria-describedby="emailHelp" />
                                     <small id="mkm" className="form-text text-muted"></small>
                                 </div>
                                 <div className="form-group">
-                                    <label for="exampleInputNlmk">Nhập lại mật khẩu mới</label>
+                                    <label htmlFor="exampleInputNlmk">Nhập lại mật khẩu mới</label>
                                     <input type="text" className="form-control" id="exampleInputMlmk" placeholder="Nhập lại mật khẩu mới" aria-describedby="emailHelp" />
                                     <small id="nlmk" className="form-text text-muted"></small>
                                 </div>
@@ -193,7 +193,7 @@ const DetailInfo = () => {
                                 <p>Tài khoản</p>
                             </div>
                             <div className="form-group">
-                                <label for="exampleInputMkc">
+                                <label htmlFor="exampleInputMkc">
                                     <i className="fa fa-envelope-o" aria-hidden="true"></i> Email:
 								</label>
 

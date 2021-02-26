@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, {useState} from 'react';
 import NavBar from './components/NavBar/NavBar';
 import ExamplaryStu from './components/ExamplaryStu/ExamplaryStu';
 import Homepage from './components/Homepage/Homepage';
@@ -12,18 +12,30 @@ import RegisAndLogin from './components/RegisAndLogin/RegisAndLogin';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
+//const store = store;
+//UserName và mssv sau khi đăng nhập thành công
+// store.dispatch(sinhVienLogin(
+//   {
+//     userName : "",
+//     mssv : "31181020049"
+//   }
+// ));
+
+
+
 function App() {
 
   return (
     <div>
-
       <Router className="RouterApp">
         <div className="SV5Tapp">
           <Switch>
             <Route exact path="/InfoStudentContainer" component={InfoStudentContainer} />
             <div>
-              <NavBar />
-              <Route exact path="/" exact component={RegisAndLogin} />
+              <NavBar/>
+              <Route exact path="/RegisAndLogin" exact component={RegisAndLogin} />
+              <Route exact path="/" exact component={Homepage} />
+              <Route exact path="/Homepage" exact component={Homepage} />
               <Route exact path="/News" exact component={News} />
               <Route exact path="/ExamplaryStu/" component={ExamplaryStu} />
               <Route exact path="/InfoEvent/" component={InfoEvent} />

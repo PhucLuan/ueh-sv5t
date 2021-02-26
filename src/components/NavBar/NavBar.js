@@ -2,15 +2,11 @@ import './NavBar.css'
 import Logoueh from '../NavBar/Logoueh.png';
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import CheckLogin from '../CheckLogin/CheckLogin';
 
 const NavBar = () => {
 
     const [NavBar, setNavbar] = useState(false);
-
-    const NavStyle = {
-        height: '100px',
-        borderBottom: '2px solid gray'
-    };
 
     const changeBackground = () => {
         if (window.scrollY >= 100) {
@@ -50,29 +46,36 @@ const NavBar = () => {
             cancelBtn.classList.add("show");
         }
     }, [])
+
+    const NavStyle = {
+        height: '100px',
+        borderBottom: '2px solid gray'
+    };
+
     return (
-        <div className = "Demo">
-        <nav className={NavBar ? 'NavBar active' : 'NavBar'} style={NavStyle}>
-            <div className="menu-icon">
-                <span className="fas fa-bars IconToggle"></span></div>
-            <Link to="/" className="logo">
-                <img src={Logoueh} alt="Logo" /></Link>
-            <div className="My-nav-items">
-                <li><Link to="/News">TIN TỨC</Link></li>
-                <li><Link to="/ExamplaryStu">TẤM GƯƠNG SV5T</Link></li>
-                <li><Link to="#">CHƯƠNG TRÌNH</Link></li>
-                <li><Link to="/InfoStudentContainer">ĐĂNG NHẬP | ĐĂNG KÝ</Link></li>
-            </div>
-            <div className="search-icon">
-                <span className="fas fa-search IconSearch"></span></div>
-            <div className="cancel-icon">
-                <span className="fas fa-times"></span></div>
-            <form action="#">
-                <input type="search" className="search-data" placeholder="Tìm kiếm" required />
-                <button type="submit" className="fas fa-search"></button>
-            </form>
-        </nav>
+        <div className="Demo">
+            <nav className={NavBar ? 'NavBar active' : 'NavBar'} style={NavStyle}>
+                <div className="menu-icon">
+                    <span className="fas fa-bars IconToggle"></span></div>
+                <Link to="/" className="logo">
+                    <img src={Logoueh} alt="Logo" /></Link>
+                <div className="My-nav-items">
+                    <li><Link to="/News">TIN TỨC</Link></li>
+                    <li><Link to="/ExamplaryStu">TẤM GƯƠNG SV5T</Link></li>
+                    <li><Link to="#">CHƯƠNG TRÌNH</Link></li>
+                    <li><Link to="/RegisAndLogin"><CheckLogin /></Link></li>
+                </div>
+                <div className="search-icon">
+                    <span className="fas fa-search IconSearch"></span></div>
+                <div className="cancel-icon">
+                    <span className="fas fa-times"></span></div>
+                <form action="#">
+                    <input type="search" className="search-data" placeholder="Tìm kiếm" required />
+                    <button type="submit" className="fas fa-search"></button>
+                </form>
+            </nav>
         </div>
     );
 }
+
 export default NavBar;
