@@ -41,7 +41,7 @@ const ProfileSV = (props) => {
 			redirect: 'follow'
 		};
 
-		fetch("https://localhost:44391/api/SinhViens/31181020049", requestOptions)
+		fetch("http://www.apisv5t.somee.com/api/SinhViens/31181020049", requestOptions)
 			.then(response => response.text())
 			.then(result => JSON.parse(result))
 			.then(res => {

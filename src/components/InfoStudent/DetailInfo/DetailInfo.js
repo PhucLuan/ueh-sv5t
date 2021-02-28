@@ -29,24 +29,25 @@ const DetailInfo = () => {
 	);
 
     const HandelUpdate = () => {
-        console.log("Ahihi");
-        axios({
-            method: 'put',
-            url: 'https://localhost:44391/api/SinhViens/31181020049',
-            header: {"Access-Control-Allow-Methods": "*"}, 
-            data: {
-                "Mssv": "31181020049",
-                "HoTen": "Ahihi",
-                "NgaySinh": "2021-02-28T09:19:29.161Z",
-                "GioiTinh": "Nam",
-                "NoiSinh": "Tây Ninh",
-                "Sdt": "0987654321",
-                "Lop": "ST001",
-                "DonVi": "BIT",
-                "Khoa": "K44",
-                "Email": "luannguyen287.k44@st.ueh.edu.vn"
-              }
-          }).then(res => console.log(res));
+        alert("Chức năng tạm thời bị đóng, sẽ mở lại sau khi hoàn thành các bước bảo mật");
+        // console.log("Ahihi");
+        // axios({
+        //     method: 'put',
+        //     url: 'https://localhost:44391/api/SinhViens/31181020049',
+        //     header: {"Access-Control-Allow-Methods": "*"}, 
+        //     data: {
+        //         "Mssv": "31181020049",
+        //         "HoTen": "Ahihi",
+        //         "NgaySinh": "2021-02-28T09:19:29.161Z",
+        //         "GioiTinh": "Nam",
+        //         "NoiSinh": "Tây Ninh",
+        //         "Sdt": "0987654321",
+        //         "Lop": "ST001",
+        //         "DonVi": "BIT",
+        //         "Khoa": "K44",
+        //         "Email": "luannguyen287.k44@st.ueh.edu.vn"
+        //       }
+        //   }).then(res => console.log(res));
     }
 
     useEffect(() => {

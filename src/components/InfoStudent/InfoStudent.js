@@ -19,7 +19,7 @@ const InfoStudent = (props) => {
     }
     useEffect(() => {
 
-        axios.get('https://localhost:44391/api/OperationProgress/31181020049')
+        axios.get('http://www.apisv5t.somee.com/api/OperationProgress/31181020049')
             .then(res => {
                 setCriterias([...res.data]);
             })

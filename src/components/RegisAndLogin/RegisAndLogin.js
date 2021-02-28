@@ -45,7 +45,7 @@ const RegisAndLogin = (props) => {
             redirect: 'follow'
         };
 
-        fetch("https://localhost:44391/api/Users/authenticate", requestOptions)
+        fetch("http://www.apisv5t.somee.com/api/Users/authenticate", requestOptions)
             .then(response => response.text())
             .then(result => JSON.parse(result))
             .then(x => setLoginOject({ IsSuccessed: x.IsSuccessed, Message: x.Message, ResultObj: x.ResultObj }))
@@ -53,28 +53,29 @@ const RegisAndLogin = (props) => {
     }
 
     function PostRegister() {
-        var myHeaders = new Headers();
-        myHeaders.append("Cookie", ".AspNetCore.Identity.Application=CfDJ8H6WXzF55y1NtxBU_nMtEQtpwcT1Fkj6Cu5oCuq_5UszliQ1si0pXIOw6MJfK_rY4ms_iAeK8aFqcY0P2oA2kEbtgzhsrd7wPEn-1oZJ9Qx9n_igd1KGKdMWPfukN_3b1VvOohYBO_cmeCgURaXyHljyYWvdrKjxmTEX2VbRpFPy3f8Wfp7xl8IPg2LK7oCuw3RnRxw2o7KwtFFloGLwW0NgivFN_2d7dqkRZhv5uvbxL3fM6FSD6bShr4kUT9siqIWm-tWPN-rU0UwjOJ3qF1jMIrkNKdbx9IlGAETP3uY7e2kyyTE5G4D_JnUe8QraJhRNbk_Cn3lavL10RRffjZkyvsxIvcy307r2Ylcd54u7oWEinCZVsU3Ki0VHwX8JZmQ3ThIFLZQn49Lylmz6UadRjEGPSUdOB7bqdHB6Vpgy41-rCctVUcMSzNuQyb7but9LQ3-tT5z2G0ZbT5MZ-yRFKSGBLp4zDMWbQIb2TWT2IAsBH0KHvEnXPlpi-yPBthr0H1a9RWVnWXxgmn2yJLBy5bNJv5TSvMA_0uFBCXTbWWAkEmIX04tyMQ_PV_TcUoxo1Keray_196PIHiHOC1YXHxSy3XL8MRlm1gYHvIOUqB7jROBSe3-KIvWyyYFIOg");
+        alert("Chức năng tạm thời đóng, vui lòng sử dụng tài khoản Demo được cung cấp");
+        // var myHeaders = new Headers();
+        // myHeaders.append("Cookie", ".AspNetCore.Identity.Application=CfDJ8H6WXzF55y1NtxBU_nMtEQtpwcT1Fkj6Cu5oCuq_5UszliQ1si0pXIOw6MJfK_rY4ms_iAeK8aFqcY0P2oA2kEbtgzhsrd7wPEn-1oZJ9Qx9n_igd1KGKdMWPfukN_3b1VvOohYBO_cmeCgURaXyHljyYWvdrKjxmTEX2VbRpFPy3f8Wfp7xl8IPg2LK7oCuw3RnRxw2o7KwtFFloGLwW0NgivFN_2d7dqkRZhv5uvbxL3fM6FSD6bShr4kUT9siqIWm-tWPN-rU0UwjOJ3qF1jMIrkNKdbx9IlGAETP3uY7e2kyyTE5G4D_JnUe8QraJhRNbk_Cn3lavL10RRffjZkyvsxIvcy307r2Ylcd54u7oWEinCZVsU3Ki0VHwX8JZmQ3ThIFLZQn49Lylmz6UadRjEGPSUdOB7bqdHB6Vpgy41-rCctVUcMSzNuQyb7but9LQ3-tT5z2G0ZbT5MZ-yRFKSGBLp4zDMWbQIb2TWT2IAsBH0KHvEnXPlpi-yPBthr0H1a9RWVnWXxgmn2yJLBy5bNJv5TSvMA_0uFBCXTbWWAkEmIX04tyMQ_PV_TcUoxo1Keray_196PIHiHOC1YXHxSy3XL8MRlm1gYHvIOUqB7jROBSe3-KIvWyyYFIOg");
 
-        var formdata = new FormData();
-        formdata.append("FullName", FullName);
-        formdata.append("Mssv", Mssv);
-        formdata.append("UserName", email);
-        formdata.append("Password", password);
-        formdata.append("ConfirmPassword", Confirmpassword);
+        // var formdata = new FormData();
+        // formdata.append("FullName", FullName);
+        // formdata.append("Mssv", Mssv);
+        // formdata.append("UserName", email);
+        // formdata.append("Password", password);
+        // formdata.append("ConfirmPassword", Confirmpassword);
 
-        var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: formdata,
-            redirect: 'follow'
-        };
+        // var requestOptions = {
+        //     method: 'POST',
+        //     headers: myHeaders,
+        //     body: formdata,
+        //     redirect: 'follow'
+        // };
 
-        fetch("https://localhost:44391/api/Users", requestOptions)
-            .then(response => response.text())
-            .then(result => JSON.parse(result))
-            .then(x => setLoginOject({ IsSuccessed: x.IsSuccessed, Message: x.Message, ResultObj: x.ResultObj }))
-            .catch(error => console.log('error', error));
+        // fetch("https://localhost:44391/api/Users", requestOptions)
+        //     .then(response => response.text())
+        //     .then(result => JSON.parse(result))
+        //     .then(x => setLoginOject({ IsSuccessed: x.IsSuccessed, Message: x.Message, ResultObj: x.ResultObj }))
+        //     .catch(error => console.log('error', error));
     }
     useEffect(() => {
         const sign_in_Mybtn = document.querySelector("#sign-in-Mybtn");

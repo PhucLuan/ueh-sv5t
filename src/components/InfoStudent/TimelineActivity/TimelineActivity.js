@@ -13,14 +13,14 @@ const TimelineActivity = (props) => {
     useEffect(() => {
         if (props.TypeActivity == "Require") {
             //https://601ce4671a9c220017060f4b.mockapi.io/RequiredActivity
-            axios.get(`https://localhost:44391/api/TimelineActivity/${props.IdTieuChi}/true/31181020049`)
+            axios.get(`http://www.apisv5t.somee.com/api/TimelineActivity/${props.IdTieuChi}/true/31181020049`)
                 .then(res => {
                     setActivitys([...res.data]);
                 })
                 .catch(error => console.log(error));
         }
         else{
-            axios.get(`https://localhost:44391/api/TimelineActivity/${props.IdTieuChi}/false/31181020049`)
+            axios.get(`http://www.apisv5t.somee.com/api/TimelineActivity/${props.IdTieuChi}/false/31181020049`)
                 .then(res => {
                     setActivitys([...res.data]);
                 })
