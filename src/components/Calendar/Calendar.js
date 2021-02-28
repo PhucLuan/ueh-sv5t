@@ -4,7 +4,7 @@ import { DataManager,WebApiAdaptor } from '@syncfusion/ej2-data';
 
 const remoteData = new DataManager({
     //https://ej2services.syncfusion.com/production/web-services/api/Schedule
-    url: 'http://localhost:54178/TimeLineEvent',
+    url: 'https://localhost:44391/TimeLineEvent',
     adaptor: new WebApiAdaptor,
     crossDomain: true
 });

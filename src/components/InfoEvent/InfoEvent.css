@@ -84,7 +84,7 @@
 .img-card{
   width: 100%;
 }
-.card-text{
+.InfoEven .card-text{
   width: 198px;
   height: 38px;
   left: 167px;
@@ -147,14 +147,14 @@
 .content-list,.description-content{
   width: 100%;
 }
-.card{
+.InfoEvent .card{
   width: 250%;
 }
 .img-card img{
   width: 37%;
   height: 13rem;
 }
-.card-text{
+.InfoEven .card-text{
   width: 37%;
   font-size: 12px;
   line-height: 14px;

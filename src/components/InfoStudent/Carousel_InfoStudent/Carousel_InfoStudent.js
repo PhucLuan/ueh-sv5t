@@ -1,4 +1,10 @@
 import Rectangle from '../Img/Rectangle 27.png';
+import final_01 from "./Img/final-01.png";
+import final_02 from "./Img/final-02.png";
+import final_03 from "./Img/final-03.png";
+import final_04 from "./Img/final-04.png";
+import final_05 from "./Img/final-05.png";
+import final_06 from "./Img/final-06.png";
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,7 +17,7 @@ const carousel_InfoStudent = () => {
     return (
         <div className="carousel_InfoStudent">
             {/* <!-- ------------------------------------------------------------------------------------------------------> */}
-            <div className="FILE_SV5TOT mt-5 mb-5">
+            <div className="FILE_SV5TOT mt-5 mb-5" style = {{background : 'white'},{borderRadius : '10px'},{height : 'auto'}}>
                 <div className="row ">
                     <ul className="Title_File mt-3">
                         <li className="Title_File_Left"><p>Hồ sơ sinh viên 5 tốt</p></li>
@@ -20,7 +26,7 @@ const carousel_InfoStudent = () => {
                 </div>
                 <div className="container carousel-InfoStudent">
                     <Swiper
-                        className="swiper-container-InfoStudent"
+                        className="swiper-container-InfoStudent-carousel"
                         slidesPerView={1}
                         loop="true"
                         pagination={{ clickable: true }}
@@ -38,7 +44,7 @@ const carousel_InfoStudent = () => {
                         <SwiperSlide>
                             <div>
                                 <div className="Img_File text-center">
-                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image1" />
+                                    <img src={final_01} className="img-responsive img-fluid" alt="Image1" />
                                 </div>
                                 <div className="Title_Img">
                                     <p>Thông tin cá nhân sinh viên</p>
@@ -48,7 +54,7 @@ const carousel_InfoStudent = () => {
                         <SwiperSlide>
                             <div>
                                 <div className="Img_File text-center">
-                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image2" />
+                                    <img src={final_04} className="img-responsive img-fluid" alt="Image2" />
                                 </div>
                                 <div className="Title_Img">
                                     <p>Thể lực tốt</p>
@@ -58,7 +64,7 @@ const carousel_InfoStudent = () => {
                         <SwiperSlide>
                             <div>
                                 <div className="Img_File text-center">
-                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image1" />
+                                    <img src={final_02} className="img-responsive img-fluid" alt="Image1" />
                                 </div>
                                 <div className="Title_Img">
                                     <p>Học tập tốt</p>
@@ -68,7 +74,7 @@ const carousel_InfoStudent = () => {
                         <SwiperSlide>
                             <div>
                                 <div className="Img_File text-center">
-                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image1" />
+                                    <img src={final_03} className="img-responsive img-fluid" alt="Image1" />
                                 </div>
                                 <div className="Title_Img">
                                     <p>Đạo đức tốt</p>
@@ -78,7 +84,7 @@ const carousel_InfoStudent = () => {
                         <SwiperSlide>
                             <div>
                                 <div className="Img_File text-center">
-                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image1" />
+                                    <img src={final_05} className="img-responsive img-fluid" alt="Image1" />
                                 </div>
                                 <div className="Title_Img">
                                     <p>Hội nhập tốt</p>
@@ -88,7 +94,7 @@ const carousel_InfoStudent = () => {
                         <SwiperSlide>
                             <div>
                                 <div className="Img_File text-center">
-                                    <img src={Rectangle} className="img-responsive img-fluid" alt="Image1" />
+                                    <img src={final_06} className="img-responsive img-fluid" alt="Image1" />
                                 </div>
                                 <div className="Title_Img">
                                     <p>Tình nguyện tốt</p>

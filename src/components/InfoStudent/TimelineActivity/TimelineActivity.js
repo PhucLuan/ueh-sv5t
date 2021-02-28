@@ -13,14 +13,14 @@ const TimelineActivity = (props) => {
     useEffect(() => {
         if (props.TypeActivity == "Require") {
             //https://601ce4671a9c220017060f4b.mockapi.io/RequiredActivity
-            axios.get('http://localhost:54178/api/TimelineActivity/DDT/true')
+            axios.get(`https://localhost:44391/api/TimelineActivity/${props.IdTieuChi}/true/31181020049`)
                 .then(res => {
                     setActivitys([...res.data]);
                 })
                 .catch(error => console.log(error));
         }
         else{
-            axios.get('http://localhost:54178/api/TimelineActivity/DDT/false')
+            axios.get(`https://localhost:44391/api/TimelineActivity/${props.IdTieuChi}/false/31181020049`)
                 .then(res => {
                     setActivitys([...res.data]);
                 })
@@ -71,50 +71,6 @@ const TimelineActivity = (props) => {
         <VerticalTimeline >
 
             {ListActivity}
-            {/* <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ borderTop: '7px solid rgb(16, 204, 82)', color: 'black' }}
-                contentArrowStyle={{ borderRight: '7px solid  rgb(16, 204, 82' }}
-                date="2011 - present"
-                iconStyle={{ background: 'rgb(16, 204, 82', color: '#fff' }}
-                icon={<CheckIcon />}
-            >
-                <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                <p>Creative Direction, User Experience, Visual Design, Project Management, Team Leading</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ borderTop: '7px solid rgb(16, 204, 82)', color: 'black' }}
-                contentArrowStyle={{ borderRight: '7px solid  rgb(16, 204, 82' }}
-                date="2011 - present"
-                iconStyle={{ background: 'rgb(16, 204, 82', color: '#fff' }}
-                icon={<CheckIcon />}
-            >
-                <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                <p>Creative Direction, User Experience, Visual Design, Project Management, Team Leading</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ borderTop: '7px solid #EC4520', color: 'black' }}
-                contentArrowStyle={{ borderRight: '7px solid  #EC4520' }}
-                date="2011 - present"
-                iconStyle={{ background: '#EC4520', color: '#fff' }}
-                icon={<ClearIcon />}
-            >
-                <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                <p>Creative Direction, User Experience, Visual Design, Project Management, Team Leading</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ borderTop: '7px solid #EC4520', color: 'black' }}
-                contentArrowStyle={{ borderRight: '7px solid  #EC4520' }}
-                date="2011 - present"
-                iconStyle={{ background: '#EC4520', color: '#fff' }}
-                icon={<ClearIcon />}
-            >
-                <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                <p>Creative Direction, User Experience, Visual Design, Project Management, Team Leading</p>
-            </VerticalTimelineElement> */}
 
         </VerticalTimeline>
     );

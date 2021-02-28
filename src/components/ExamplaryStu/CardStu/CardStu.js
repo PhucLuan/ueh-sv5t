@@ -3,7 +3,7 @@ import ImgStu from '../Img/Rectangle 25.png';
 const CardStu = props => {
     return (
         <div className="card">
-            <img src={ImgStu} className="card-img-top" alt="..." />
+            <img src={props.src} className="card-img-top img-fluid" alt="..." />
             <div className="card-body">
                 <div className="card-text align-self-center">
                     <h5 className="text-center">{props.name} | {props.class}</h5>

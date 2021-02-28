@@ -1,5 +1,7 @@
 import './style.css'
 import log from './Img/log.svg';
+import RegisImg from "./Img/đăng ký-01.png";
+import LoginImg from "./Img/đăng nhập-01.png";
 import register from './Img/register.svg';
 import React, { useState, useEffect } from 'react';
 import { Redirect } from "react-router-dom";
@@ -16,7 +18,6 @@ const RegisAndLogin = (props) => {
     const [Confirmpassword, setConfirmpassword] = useState("");
     const [LoginObject, setLoginOject] = useState({ IsSuccessed: "", Message: "", ResultObj: "" });
     const [IsValid, setIsValid] = useState(true);
-
 
     function handleSubmitLogin(event) {
         event.preventDefault();
@@ -199,10 +200,10 @@ const RegisAndLogin = (props) => {
                     <div className="panel left-panel">
                         <div className="content">
                             <h3>Chưa có tài khoản đăng nhập ?</h3>
-                            <p>
+                            {/* <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
                                 ex ratione. Aliquid!
-            </p>
+                            </p> */}
                             <button className="Mybtn transparent" id="sign-up-Mybtn">
                                 Đăng ký
             </button>
@@ -212,10 +213,10 @@ const RegisAndLogin = (props) => {
                     <div className="panel right-panel">
                         <div className="content">
                             <h3>Đã có tài khoản ?</h3>
-                            <p>
+                            {/* <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
                                 laboriosam ad deleniti.
-            </p>
+                            </p> */}
                             <button className="Mybtn transparent" id="sign-in-Mybtn">
                                 Đăng nhập
             </button>
@@ -229,7 +230,7 @@ const RegisAndLogin = (props) => {
 }
 const mapStateToProps = state => {
     return {
-        sinhVien: state.sinhVien
+        sinhVien: state.Loggin.sinhVien
     }
 }
 const mapDispatchToProps = (dispatch, props) => {

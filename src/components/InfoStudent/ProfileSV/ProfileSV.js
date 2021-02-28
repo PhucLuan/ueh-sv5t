@@ -3,14 +3,11 @@ import './ProfileSV.css'
 import React, { useState, useEffect } from 'react';
 import { Redirect } from "react-router-dom";
 import { connect } from 'react-redux';
-import axios from 'axios';
-import { Info } from '@material-ui/icons';
 
 const ProfileSV = (props) => {
 
 	const [isActiveLink, setActiveLink] = useState();
 
-	console.log(props.sinhVien)
 	const [InfoSinhVien, setInfoSinhVien] = useState(
 		{
 			Mssv: "",
@@ -76,14 +73,13 @@ const ProfileSV = (props) => {
 	if (isActiveLink === true) {
 		return (<Redirect to="/InfoStudentContainer/DetailInfo" />);
 	}
-	console.log(InfoSinhVien);
 	return (
 		<div className="container container-hssv">
 			<div className="row">
 				<div className="col-md-4 col-12" id="navbar-Info">
 					<div className="left-hssv">
 						<div className="left-content-hssv">
-							<p className="border-bottom">Xin chào, Võ Hồng Nhiến </p>
+							<p className="border-bottom">Xin chào, {InfoSinhVien.HoTen} </p>
 							<nav className="sub-menu-hssv">
 								<li className="border-bottom active-sub-menu-hssv">
 									<a className="nav-link" href="#content-hssv">Thông tin cá nhân sinh viên</a>
@@ -342,7 +338,7 @@ const ProfileSV = (props) => {
 }
 const mapStateToProps = state => {
 	return {
-		sinhVien: state.sinhVien
+		sinhVien: state.Loggin
 	}
 }
 

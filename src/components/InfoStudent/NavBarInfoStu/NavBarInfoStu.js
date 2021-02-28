@@ -41,6 +41,8 @@ const NavBarInfoStu = () => {
                             className="nav-link">Thông tin cá nhân</NavLink>
                         <NavLink to="/InfoStudentContainer/DetailInfo"
                             className="nav-link">Hồ sơ Sinh viên 5 tốt</NavLink>
+                        <NavLink to="/InfoStudentContainer/Calendar"
+                            className="nav-link">Lịch chương trình sắp diễn ra</NavLink>
                     </div>
                 </div>
             </div>

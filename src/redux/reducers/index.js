@@ -1,22 +1,10 @@
-const initialState = {
-    sinhVien: {
-        userName: "",
-        mssv: "",
-        token: ""
-    }
+import Loggin from "./Loggin";
+import Toggle from "./Toggle";
+import { combineReducers } from 'redux';
 
-}
-
-const myReducer = (state = initialState, action) => {
-    if (action.type === 'LOGIN') {
-        return {
-            sinhVien: {
-                userName: action.sinhVien.userName,
-                mssv: action.sinhVien.mssv,
-                token: action.sinhVien.token
-            }
-        }
+const myReducer = combineReducers(
+    {
+        Loggin,Toggle
     }
-    return state;
-}
+)
 export default myReducer;

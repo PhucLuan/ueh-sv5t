@@ -4,3 +4,10 @@ export const sinhVienLogin = (sinhVien) => {
         sinhVien //sinhVien : sinhVien
     }
 }
+
+export const ToggleTimeLine = () => {
+    return{
+        type : 'TOGGLE',
+        //isToggle //sinhVien : sinhVien
+    }
+}

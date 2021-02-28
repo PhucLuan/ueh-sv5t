@@ -27,7 +27,7 @@ const News = () => {
     }
     
     return (
-        <div className="main-content container">
+        <div className="main-content container Newscpn">
             <div className="content-top">
                 <img src={top_1} alt="Img top" />
             </div>

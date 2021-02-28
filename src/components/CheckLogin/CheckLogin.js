@@ -49,7 +49,7 @@ const CheckLogin = (props) => {
 
 const mapStateToProps = state => {
     return {
-        sinhVien: state.sinhVien
+        sinhVien: state.Loggin
     }
 }
 const mapDispatchToProps = (dispatch, props) => {

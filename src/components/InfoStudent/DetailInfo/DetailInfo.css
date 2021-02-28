@@ -56,7 +56,7 @@
 .right-header {
 	display: flex;
 	justify-content: space-between;
-	padding: 20px 40px;
+	padding: 20px 0px;
 	color: #FF6D4D;
 }
 
@@ -69,6 +69,7 @@
 .btn-outline-warning {
 	color: #FF6D4D;
 	border-color: #FF6D4D;
+	margin-right: 10px;
 }
 
 .btn-outline-warning:hover {
@@ -78,11 +79,11 @@
 }
 
 .form-container {
-	margin-top: 10px;
 	background-color: #ffffff;
 	border-radius: 4px;
 	padding: 40px;
 	padding-bottom: 10px;
+	padding-top: 0px;
 }
 
 .form-group label {

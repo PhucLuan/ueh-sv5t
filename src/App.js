@@ -6,21 +6,9 @@ import Homepage from './components/Homepage/Homepage';
 import News from './components/News/News';
 import InfoEvent from './components/InfoEvent/InfoEvent';
 import NotFound from './components/NotFound/NotFound'
-import Calendar from './components/Calendar/Calendar';
 import InfoStudentContainer from './components/InfoStudent/InfoStudentContainer/InfoStudentContainer';
 import RegisAndLogin from './components/RegisAndLogin/RegisAndLogin';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-
-//const store = store;
-//UserName và mssv sau khi đăng nhập thành công
-// store.dispatch(sinhVienLogin(
-//   {
-//     userName : "",
-//     mssv : "31181020049"
-//   }
-// ));
-
 
 
 function App() {
@@ -38,9 +26,7 @@ function App() {
               <Route exact path="/Homepage" exact component={Homepage} />
               <Route exact path="/News" exact component={News} />
               <Route exact path="/ExamplaryStu/" component={ExamplaryStu} />
-              <Route exact path="/InfoEvent/" component={InfoEvent} />
-              <Route exact path="/Calendar" component={Calendar} />
-              
+              <Route exact path="/InfoEvent/" component={InfoEvent} />              
             </div>
             <Route component={NotFound} />
           </Switch>

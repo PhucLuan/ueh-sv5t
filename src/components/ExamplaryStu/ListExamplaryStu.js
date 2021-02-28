@@ -15,7 +15,9 @@ const ListExamplaryStu = props => {
     const Stu2020s = Students.map((Student) => {
         return (
             <SwiperSlide key={Student.id}>
-                <CardStu name={Student.name}
+                <CardStu 
+                    src = {Student.src}
+                    name ={Student.name}
                     className={Student.class}
                     pointStudy={Student.pointStudy}
                     pointActivity={Student.pointActivity} />
@@ -32,7 +34,7 @@ const ListExamplaryStu = props => {
             slidesPerColumn={2}
             slidesPerColumnFill="row"
             breakpoints={{
-                600: {
+                300: {
                     slidesPerView: 1,
                     slidesPerColumn: 3,
                     //slidesPerColumnFill: 'row',
@@ -41,7 +43,7 @@ const ListExamplaryStu = props => {
                 1000: {
                     slidesPerView: 3,
                     slidesPerColumn: 2,
-                    spaceBetween: 5,
+                    spaceBetween: 50,
                 },
             }}
         >
