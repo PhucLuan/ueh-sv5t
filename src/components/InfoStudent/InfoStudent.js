@@ -19,7 +19,7 @@ const InfoStudent = (props) => {
     }
     useEffect(() => {
 
-        axios.get('http://www.apisv5t.somee.com/api/OperationProgress/31181020049')
+        axios.get('https://webapisv5t20210228221308.azurewebsites.net/api/OperationProgress/31181020049')
             .then(res => {
                 setCriterias([...res.data]);
             })

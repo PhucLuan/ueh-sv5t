@@ -45,7 +45,7 @@ const RegisAndLogin = (props) => {
             redirect: 'follow'
         };
 
-        fetch("http://www.apisv5t.somee.com/api/Users/authenticate", requestOptions)
+        fetch("https://webapisv5t20210228221308.azurewebsites.net/api/Users/authenticate", requestOptions)
             .then(response => response.text())
             .then(result => JSON.parse(result))
             .then(x => setLoginOject({ IsSuccessed: x.IsSuccessed, Message: x.Message, ResultObj: x.ResultObj }))
