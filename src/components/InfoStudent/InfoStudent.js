@@ -18,8 +18,10 @@ const InfoStudent = (props) => {
         props.onToggleTimeLine();
     }
     useEffect(() => {
-
-        axios.get('https://webapisv5t20210228221308.azurewebsites.net/api/OperationProgress/31181020049')
+        //const AuthStr = 'Bearer '+'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJsdWFubmd1eWVuMjg3Lms0NEBzdC51ZWguZWR1LnZuIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZ2l2ZW5uYW1lIjoiTmd1eeG7hW4gUGjDumMgTHXDom4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibHVhbm5ndXllbjI4Ny5rNDRAc3QudWVoLmVkdS52biIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL21vYmlsZXBob25lIjoiMzExODEwMjAwNDkiLCJleHAiOjE2MTUzNzg0MDUsImlzcyI6IlRlc3QuY29tIiwiYXVkIjoiVGVzdC5jb20ifQ.sH13X-uaYv0FxuuDUfZr5nj7TLJmU7YJVQG84j0S7hQ'; 
+        //, { headers: { Authorization: AuthStr } }
+        //https://webapisv5t20210228221308.azurewebsites.net/api/OperationProgress/31181020049
+        axios.get('https://webapisv5t20210310232507.azurewebsites.net/31181020049')
             .then(res => {
                 setCriterias([...res.data]);
             })

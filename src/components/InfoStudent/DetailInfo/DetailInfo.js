@@ -60,7 +60,7 @@ const DetailInfo = () => {
 			redirect: 'follow'
 		};
 
-		fetch("https://localhost:44391/api/SinhViens/31181020049", requestOptions)
+		fetch("https://webapisv5t20210310232507.azurewebsites.net/api/SinhViens/31181020049", requestOptions)
 			.then(response => response.text())
 			.then(result => JSON.parse(result))
 			.then(res => {

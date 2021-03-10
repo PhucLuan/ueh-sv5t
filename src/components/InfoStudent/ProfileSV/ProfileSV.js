@@ -8,28 +8,7 @@ const ProfileSV = (props) => {
 
 	const [isActiveLink, setActiveLink] = useState();
 
-	const [InfoSinhVien, setInfoSinhVien] = useState(
-		{
-			Mssv: "",
-			HoTen: "",
-			NgaySinh: null,
-			GioiTinh: null,
-			NoiSinh: null,
-			Sdt: null,
-			Lop: null,
-			DonVi: null,
-			Khoa: null,
-			Email: "",
-			Iduser: null,
-			DonViNavigation: null,
-			IduserNavigation: null,
-			Diem: [],
-			KqTheoTieuchi: [],
-			ThamgiaChuongtrinh: [],
-			ThoidiemSvThamgia: [],
-			ThuchienTieuchuan: []
-		}
-	);
+	const [InfoSinhVien, setInfoSinhVien] = useState({});
 
 	useEffect(() => {
 		var myHeaders = new Headers();
@@ -41,13 +20,27 @@ const ProfileSV = (props) => {
 			redirect: 'follow'
 		};
 
-		fetch("https://webapisv5t20210228221308.azurewebsites.net/api/SinhViens/31181020049", requestOptions)
+		fetch("https://webapisv5t20210310232507.azurewebsites.net/api/SinhViens/31181020049", requestOptions)
 			.then(response => response.text())
 			.then(result => JSON.parse(result))
 			.then(res => {
-				setInfoSinhVien(
-					{
-						Mssv: res.Mssv,
+				setInfoSinhVien({
+					...InfoSinhVien,
+					Mssv: res.Mssv,
+					HoTen: res.HoTen,
+					NgaySinh: res.NgaySinh,
+					GioiTinh: res.GioiTinh,
+					NoiSinh: res.NoiSinh,
+					Sdt: res.Sdt,
+					Lop: res.Lop,
+					DonVi: res.DonVi,
+					Khoa: res.Khoa,
+					Email: res.Email
+				}
+				);
+
+				/*
+					Mssv: res.Mssv,
 						HoTen: res.HoTen,
 						NgaySinh: res.NgaySinh,
 						GioiTinh: res.GioiTinh,
@@ -56,17 +49,8 @@ const ProfileSV = (props) => {
 						Lop: res.Lop,
 						DonVi: res.DonVi,
 						Khoa: res.Khoa,
-						Email: res.Email,
-						Iduser: null,
-						DonViNavigation: null,
-						IduserNavigation: null,
-						Diem: [],
-						KqTheoTieuchi: [],
-						ThamgiaChuongtrinh: [],
-						ThoidiemSvThamgia: [],
-						ThuchienTieuchuan: []
-					}
-				);
+						Email: res.Email
+					 */
 			})
 			.catch(error => console.log('error', error));
 	}, [])

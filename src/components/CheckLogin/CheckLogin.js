@@ -20,31 +20,33 @@ const CheckLogin = (props) => {
         return (<Redirect to="/InfoStudentContainer" />);
     }
 
-    if (props.sinhVien.userName !== "") {
-        return (
-            <div>
-                <div className="dropdown">
-                    <a className="dropdown-toggle"
-                        href="#" role="button" id="dropdownMenuLink"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        {props.sinhVien.userName}
-                    </a>
+    return (
+        <React.Fragment>
+            {
+                (props.sinhVien.userName !== "" ?
+                    (<React.Fragment>
+                        <div className="dropdown">
+                            <a className="dropdown-toggle"
+                                href="#" role="button" id="dropdownMenuLink"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {props.sinhVien.userName}
+                            </a>
 
-                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li>
-                            <a className="dropdown-item" style={{color:'#005495'}} href="#" onClick={() => setActiveLink(true)}>Thông tin sinh viên</a>
-                        </li>
-                        <li>
-                            <a className="dropdown-item" style={{color:'#005495'}} href="#" onClick={() => HandleLogout()}>Đăng xuất</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        );
-    }
-    else {
-        return (<p>ĐĂNG NHẬP | ĐĂNG KÝ</p>);
-    }
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li>
+                                    <a className="dropdown-item" style={{ color: '#005495' }} href="#" onClick={() => setActiveLink(true)}>Thông tin sinh viên</a>
+                                </li>
+                                <li>
+                                    <a className="dropdown-item" style={{ color: '#005495' }} href="#" onClick={() => HandleLogout()}>Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </React.Fragment>)
+                    : (<p>ĐĂNG NHẬP | ĐĂNG KÝ</p>))
+            }
+        </React.Fragment>
+    );
+
 }
 
 const mapStateToProps = state => {
